@@ -1,6 +1,6 @@
 # Game Room: social content
 
-Links: put the site link in every bio. Replace `<site>` below with your GitHub Pages URL.
+Site: https://zeffiroh.github.io/game-room/ (put it in every bio). Repo: https://github.com/zeffiroh/game-room
 
 ## Bios
 **Instagram / TikTok (150 chars)**
@@ -13,14 +13,14 @@ Links: put the site link in every bio. Replace `<site>` below with your GitHub P
 > Game Room is a free browser arcade of real-time biology games and deep quiz packs (AP Biology, AP Statistics, bioinformatics, comparative religion). Teachers can buy a one-time lifetime code to run a full class party: projector plus phones, quiz rounds, co-op games, a jukebox break room, movie night and awards.
 
 **YouTube channel description**
-> Clips from Game Room: biology games, hard quiz questions explained, and classroom parties run from one projector. Play free at <site>.
+> Clips from Game Room: biology games, hard quiz questions explained, and classroom parties run from one projector. Play free at https://zeffiroh.github.io/game-room/.
 
 ## Launch week
 
 **Day 1: Announcement (all platforms)**
 > We made a game room.
 > Four games about how living things actually work. Five quiz packs that explain every answer. And a party mode where your teacher runs the whole night from the projector.
-> Free to play. No account. <site>
+> Free to play. No account. https://zeffiroh.github.io/game-room/
 
 **Day 2: Moth Hunter clip (Reels/TikTok, 15 s)**
 On screen: the moth population going from pale to dark as you eat the visible ones.
@@ -35,7 +35,7 @@ Slide 2: four choices. Slide 3: "≈ 0.64. The 0.36 trap is β." Caption:
 
 **Day 4: Teacher post (LinkedIn / FB groups / X)**
 > Last month we ran a class party for an AP Bio class off one projector. Everybody joined on their phone with a 4-letter code, picked a blocky guy, and played. Quiz rounds where every guy walks to the answer they picked. A co-op immune system game where the class has to shout letters at each other. A jukebox break. Movie night with live comments.
-> It's called Game Room. Try the demo free; a teacher code is one payment, for life. <site>
+> It's called Game Room. Try the demo free; a teacher code is one payment, for life. https://zeffiroh.github.io/game-room/
 
 **Day 5: Quiz Shelf (carousel of the 5 pack covers)**
 > Five packs. 146 questions. Every single one tells you why.
@@ -69,7 +69,7 @@ Slide 2: four choices. Slide 3: "≈ 0.64. The 0.36 trap is β." Caption:
 ## Pitch to a teacher (DM / email)
 > Hi! We made Game Room, a set of browser games and deep quiz packs for AP Bio / AP Stats, plus a party mode that runs a whole class session from your projector while students play on phones (no app, no accounts).
 > There's a free demo in Party mode, so you can run a whole night in your own browser in 5 minutes. If you like it, a lifetime teacher code is a one-time payment. Want a code to try with your class first?
-> Mitali Aayat Mahnoor, <site>
+> Mitali Aayat Mahnoor, https://zeffiroh.github.io/game-room/
 
 ## Rules
 - No blue or green in any graphic. Use the palette in `brand.md`.

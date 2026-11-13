@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Game Room social preview</title>
+<style>
+  /* 1280x640: GitHub social preview and the link-preview image (og:image). Rendered to social-preview.png. */
+  html, body { margin: 0; }
+  .card { width: 1280px; height: 640px; position: relative; overflow: hidden; background: #4a1d2c; color: #fff; font-family: Tahoma, "Segoe UI", sans-serif;
+    background-image: linear-gradient(rgba(255,255,255,.06) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,.06) 2px, transparent 2px); background-size: 64px 64px; }
+  h1 { position: absolute; left: 72px; top: 64px; margin: 0; font: 900 210px/.84 "Arial Black", "Helvetica Neue", Arial, sans-serif; letter-spacing: -.05em; }
+  .tag { position: absolute; left: 76px; bottom: 92px; font: 700 40px Tahoma, sans-serif; }
+  .by { position: absolute; left: 76px; bottom: 48px; font: 700 24px "Courier New", monospace; opacity: .85; display: flex; align-items: center; gap: 10px; }
+  .win { position: absolute; right: 64px; top: 64px; width: 400px; background: #c0c0c0; padding: 5px; color: #000;
+    box-shadow: inset -3px -3px #000, inset 3px 3px #fff, inset -6px -6px #808080, inset 6px 6px #dfdfdf; }
+  .tb { background: #7a0f1f; color: #fff; font: 700 22px Tahoma; padding: 6px 10px; display: flex; justify-content: space-between; }
+  .tb i { display: inline-block; width: 22px; height: 18px; background: #c0c0c0; margin-left: 3px; box-shadow: inset -2px -2px #000, inset 2px 2px #fff; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; padding: 26px 22px; background: #fff; margin-top: 5px;
+    box-shadow: inset -2px -2px #fff, inset 2px 2px #808080; justify-items: center; }
+  .grid svg { width: 84px; height: auto; }
+  .lbl { font: 700 18px Tahoma; padding: 10px 6px 4px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>GAME<br>ROOM</h1>
+  <div class="win"><div class="tb"><span>Shelf.exe</span><span><i></i><i></i><i></i></span></div>
+    <div class="grid" id="g"></div>
+    <div class="lbl">Games &middot; Quizzes &middot; Party mode</div></div>
+  <div class="tag">Hard questions. Real games. One room.</div>
+  <div class="by"><span id="h"></span>Made by Mitali Aayat Mahnoor &middot; zeffiroh.github.io</div>
+</div>
+<script type="module">
+  import { iconSvg } from '../engine/icons.js';
+  document.getElementById('g').innerHTML = ['dice', 'dna', 'flask', 'chart', 'terminal', 'book'].map(n => iconSvg(n, { size: 84 })).join('');
+  document.getElementById('h').innerHTML = iconSvg('heart', { size: 22 });
+</script>
+</body>
+</html>
