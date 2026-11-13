@@ -64,7 +64,7 @@ One code works on every device you teach from. You type it once and that browser
 **Want to try first?** In Party mode, click **Try the demo**. You get the full party, running in your own browser,
 so you can open the projector and a few "phones" as tabs and click through a whole night.
 
-To get a code, use the donate/contact link at the bottom of the site, or reach us through [zeffiroh.github.io](https://zeffiroh.github.io).
+**[Get lifetime teacher access](https://rzp.io/rzp/game-room-teacher)**. You choose what to pay (minimum ₹499; international cards work). Your code arrives by email within 24 hours.
 
 The solo games and the Quiz Shelf are free for everyone, forever.
 

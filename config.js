@@ -27,4 +27,4 @@ export const CREDITS = {
 };
 
 // "Get lifetime teacher access" link on the locked Host screen (Razorpay payment page). '' = hidden.
-export const BUY_URL = '';
+export const BUY_URL = 'https://rzp.io/rzp/game-room-teacher';
