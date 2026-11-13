@@ -1,0 +1,191 @@
+{
+  "_help": "The AP Bio fun day. Edit the default show order, titles and awards here. Quiz rounds come from the Quiz Shelf (quizzes/), referenced by \"quiz\" + \"round\".",
+  "title": "Fun Day",
+  "joinLine": "Type a name. Pick a guy.",
+  "welcome": "Walk around, find your guy, and wait for the teacher to start.",
+  "passportTitle": "AP Bio Fun Day player card",
+  "labels": {
+    "curator": "Your teacher",
+    "venue": "fun day"
+  },
+  "theme": {
+    "colors": {}
+  },
+  "files": {
+    "cards": "cards.json",
+    "movie": "movie.json"
+  },
+  "show": [
+    {
+      "station": "lobby",
+      "title": "Spawn",
+      "stamp": {
+        "id": "arrive",
+        "name": "Showed up",
+        "all": true,
+        "coins": 10,
+        "line": "You made it."
+      }
+    },
+    {
+      "station": "quiz",
+      "round": "round1",
+      "title": "Round 1: Hard mode",
+      "intro": "Eight AP-level questions with data and experiments. Read carefully. Speed matters, but wrong is wrong.",
+      "stamp": {
+        "id": "round1",
+        "name": "Round 1",
+        "line": "Round 1 done."
+      },
+      "quiz": "ap-bio-fun-day"
+    },
+    {
+      "station": "cell-defense",
+      "title": "Cell Defense",
+      "stamp": {
+        "id": "immune",
+        "name": "Immune system",
+        "line": "You held the line."
+      }
+    },
+    {
+      "station": "ping-pong",
+      "title": "Ping Pong",
+      "stamp": {
+        "id": "pingpong",
+        "name": "Ping pong",
+        "line": "You touched the table."
+      }
+    },
+    {
+      "station": "breakroom",
+      "title": "Break room",
+      "minutes": 8,
+      "intro": "Stretch. Snack. Add songs to the jukebox and argue about them.",
+      "stamp": {
+        "id": "break",
+        "name": "Break",
+        "all": true,
+        "line": "Fuel acquired."
+      }
+    },
+    {
+      "station": "food-web",
+      "title": "Food Web",
+      "stamp": {
+        "id": "web",
+        "name": "Ecosystem",
+        "line": "You kept the web alive."
+      }
+    },
+    {
+      "station": "cell-cycle-dash",
+      "title": "Cell Cycle Dash",
+      "stamp": {
+        "id": "dash",
+        "name": "Cell cycle",
+        "line": "You went through division."
+      }
+    },
+    {
+      "station": "movie",
+      "title": "Movie night",
+      "stamp": {
+        "id": "movie",
+        "name": "Movie",
+        "all": true,
+        "line": "Popcorn break."
+      }
+    },
+    {
+      "station": "quiz",
+      "round": "finals",
+      "title": "Final round",
+      "intro": "Eight harder ones. The last question is the boss and scores double.",
+      "stamp": {
+        "id": "boss",
+        "name": "Final round",
+        "line": "You faced the boss."
+      },
+      "quiz": "ap-bio-fun-day"
+    },
+    {
+      "station": "honors",
+      "title": "Awards",
+      "intro": "Awards, then a few personal ones from your teacher."
+    },
+    {
+      "station": "closing",
+      "title": "The end"
+    }
+  ],
+  "awards": [
+    {
+      "title": "MVP",
+      "metric": "score",
+      "unit": "points",
+      "blurb": "Most points in the room."
+    },
+    {
+      "title": "Rich kid",
+      "metric": "coins",
+      "unit": "coins",
+      "blurb": "Hoarded the most coins."
+    },
+    {
+      "title": "Brainiac",
+      "metric": "stats.quiz_correct",
+      "unit": "right answers",
+      "blurb": "Got the most quiz questions right."
+    },
+    {
+      "title": "Top antibody",
+      "metric": "stats.neutralized",
+      "unit": "viruses destroyed",
+      "blurb": "Fastest finger in the immune system."
+    },
+    {
+      "title": "Ping pong wizard",
+      "metric": "stats.pp_wins",
+      "unit": "match wins",
+      "blurb": "Read every spin shot."
+    },
+    {
+      "title": "Fastest cell",
+      "metric": "stats.dash",
+      "unit": "wins",
+      "blurb": "First through cytokinesis."
+    },
+    {
+      "title": "Ecosystem manager",
+      "metric": "stats.seasons",
+      "unit": "seasons survived",
+      "blurb": "Kept the web alive the longest."
+    },
+    {
+      "title": "Hype man",
+      "metric": "stats.reacts",
+      "unit": "reactions",
+      "blurb": "Never stopped tapping the buttons."
+    }
+  ],
+  "closing": {
+    "title": "That's the show",
+    "message": "Thanks for coming. Screenshot your card.",
+    "signoff": "See you in class."
+  },
+  "library": [
+    {
+      "station": "breakroom",
+      "title": "Short break (3 min)",
+      "minutes": 3,
+      "intro": "Quick stretch. Pick songs.",
+      "stamp": {
+        "id": "break3",
+        "name": "Quick break",
+        "all": true,
+        "line": "Back."
+      }
+    }
+  ]
+}

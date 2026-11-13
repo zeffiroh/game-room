@@ -1,0 +1,29 @@
+{
+  "_help": "Write your questions. answer = index of the right choice.",
+  "rounds": {
+    "main": [
+      {
+        "q": "Replace me with your first question",
+        "choices": [
+          "Right answer",
+          "Wrong",
+          "Wrong",
+          "Wrong"
+        ],
+        "answer": 0,
+        "why": "Explain the answer here."
+      },
+      {
+        "q": "Replace me with your second question",
+        "choices": [
+          "Wrong",
+          "Right answer",
+          "Wrong",
+          "Wrong"
+        ],
+        "answer": 1,
+        "why": "Explain the answer here."
+      }
+    ]
+  }
+}

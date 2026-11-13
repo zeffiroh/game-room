@@ -1,0 +1,246 @@
+{
+  "id": "ap-bio-fun-day",
+  "title": "AP Biology: Fun Day",
+  "subject": "AP Biology",
+  "icon": "flask",
+  "level": "AP",
+  "blurb": "The original party rounds: enzyme plots, Hardy-Weinberg, water potential and a Meselson-Stahl boss.",
+  "rounds": [
+    {
+      "id": "warmup",
+      "title": "Warm-up (2 easy ones)",
+      "intro": "Two easy ones to test the buttons.",
+      "questions": [
+        {
+          "q": "Replace me with your first question",
+          "choices": [
+            "Right answer",
+            "Wrong",
+            "Wrong",
+            "Wrong"
+          ],
+          "answer": 0,
+          "why": "Explain the answer here."
+        },
+        {
+          "q": "Replace me with your second question",
+          "choices": [
+            "Wrong",
+            "Right answer",
+            "Wrong",
+            "Wrong"
+          ],
+          "answer": 1,
+          "why": "Explain the answer here."
+        }
+      ]
+    },
+    {
+      "id": "round1",
+      "title": "Round 1: Hard mode",
+      "intro": "Eight AP-level questions with data and experiments. Read carefully. Speed matters, but wrong is wrong.",
+      "questions": [
+        {
+          "seconds": 50,
+          "q": "A double-reciprocal (Lineweaver-Burk) plot of an enzyme with and without inhibitor X gives two lines. They cross on the y-axis, and the line with X is steeper. What kind of inhibitor is X?",
+          "choices": [
+            "Competitive",
+            "Noncompetitive",
+            "Uncompetitive",
+            "Irreversible"
+          ],
+          "answer": 0,
+          "why": "The y-intercept is 1/Vmax. Same y-intercept means same Vmax, which means enough substrate can outcompete the inhibitor. Steeper slope means higher apparent Km. Same Vmax, higher Km: competitive."
+        },
+        {
+          "seconds": 50,
+          "q": "In a population of 500 diploid organisms in Hardy-Weinberg equilibrium, 20 show the recessive phenotype. About how many are heterozygous carriers?",
+          "choices": [
+            "80",
+            "160",
+            "320",
+            "20"
+          ],
+          "answer": 1,
+          "why": "q² = 20/500 = 0.04, so q = 0.2 and p = 0.8. Carriers are 2pq = 2 x 0.8 x 0.2 = 0.32, and 0.32 x 500 = 160."
+        },
+        {
+          "seconds": 55,
+          "q": "A potato core neither gains nor loses mass in 0.4 M sucrose at 295 K. Using Ψs = -iCRT with R = 0.0831 L·bar/(mol·K) and i = 1 for sucrose, what is the water potential of the potato tissue (in an open dish, Ψp = 0)?",
+          "choices": [
+            "+9.8 bar",
+            "-9.8 bar",
+            "-0.4 bar",
+            "0 bar"
+          ],
+          "answer": 1,
+          "why": "No net movement means the potato's Ψ equals the solution's. Ψs = -(1)(0.4)(0.0831)(295) = -9.8 bar, and Ψp = 0 in an open dish, so Ψ = -9.8 bar."
+        },
+        {
+          "seconds": 45,
+          "q": "A mutation stops the trp repressor from binding tryptophan. The cell is swimming in tryptophan. What happens to transcription of the trp operon?",
+          "choices": [
+            "It's shut off, as normal",
+            "It stays high, because the repressor never becomes active",
+            "It's shut off because tryptophan now binds RNA polymerase",
+            "It stops because the operator is deleted"
+          ],
+          "answer": 1,
+          "why": "Tryptophan is the corepressor. The repressor only binds the operator once tryptophan is attached to it. If it can't bind tryptophan, it's always inactive and the operon stays on."
+        },
+        {
+          "seconds": 55,
+          "q": "Crossing two purple-flowered AaBb plants gives 9 purple : 7 white. What explains the ratio?",
+          "choices": [
+            "Incomplete dominance at both loci",
+            "Complementary gene action: pigment needs a dominant allele at both genes",
+            "The two genes are tightly linked",
+            "Polygenic inheritance with additive alleles"
+          ],
+          "answer": 1,
+          "why": "A normal dihybrid gives 9:3:3:1. If pigment needs both an A_ enzyme and a B_ enzyme, the 3 + 3 + 1 classes all lack one of them and look the same (white). 9 : 7."
+        },
+        {
+          "seconds": 50,
+          "q": "Cholera toxin modifies the Gα subunit so it can't hydrolyze GTP. In an intestinal cell, what happens to cAMP, and why does it cause severe diarrhea?",
+          "choices": [
+            "cAMP drops, so the cell stops absorbing water",
+            "cAMP stays high, which keeps Cl⁻ channels open and water follows the ions out",
+            "cAMP is unchanged, but Gα kills the cell",
+            "cAMP stays high, which blocks Na⁺ uptake and water stays in the cell"
+          ],
+          "answer": 1,
+          "why": "GTP hydrolysis is the off switch for Gα. Stuck on, it keeps adenylyl cyclase making cAMP, and PKA keeps Cl⁻ channels open. Ions pour into the gut and water follows by osmosis."
+        },
+        {
+          "seconds": 45,
+          "q": "Producers in a lake fix 20,000 kcal/m²/yr. Assuming 10% transfer between levels, how much energy reaches a tertiary consumer?",
+          "choices": [
+            "2,000 kcal",
+            "200 kcal",
+            "20 kcal",
+            "2 kcal"
+          ],
+          "answer": 2,
+          "why": "Primary consumer = 2,000. Secondary = 200. Tertiary = 20. Each step up is one more factor of 10, and the producers are step zero."
+        },
+        {
+          "seconds": 55,
+          "q": "A circular 6 kb plasmid has EcoRI sites at positions 1 kb and 3 kb. You digest it with EcoRI and run a gel. Which bands do you see?",
+          "choices": [
+            "2 kb and 4 kb",
+            "1 kb, 3 kb and 2 kb",
+            "2 kb, 2 kb and 2 kb",
+            "6 kb only"
+          ],
+          "answer": 0,
+          "why": "A circle cut at two places makes two pieces (a linear piece would make three). The sites are 2 kb apart one way and 6 - 2 = 4 kb apart the other way."
+        }
+      ]
+    },
+    {
+      "id": "finals",
+      "title": "Final round",
+      "intro": "Eight harder ones. The last question is the boss and scores double.",
+      "questions": [
+        {
+          "seconds": 50,
+          "q": "A drug stops kinetochore microtubules from shortening. Where do the treated cells get stuck?",
+          "choices": [
+            "G1",
+            "S phase",
+            "At the metaphase to anaphase transition, held by the spindle checkpoint",
+            "G2"
+          ],
+          "answer": 2,
+          "why": "Anaphase needs microtubules to shorten and pull sister chromatids apart. The spindle assembly checkpoint won't let the cell proceed until every kinetochore is attached and under tension."
+        },
+        {
+          "seconds": 55,
+          "q": "An X-linked recessive disease affects 1 in 10,000 males. About what fraction of females are carriers?",
+          "choices": [
+            "1 in 10,000",
+            "1 in 5,000",
+            "1 in 100",
+            "1 in 50,000"
+          ],
+          "answer": 1,
+          "why": "Males have one X, so the male frequency is q = 0.0001. Carrier females are 2pq, and p is almost 1, so 2pq is about 2q = 0.0002, which is 1 in 5,000."
+        },
+        {
+          "seconds": 50,
+          "q": "You want bacteria to make a human protein. Why do you clone the cDNA made from mRNA instead of the genomic gene?",
+          "choices": [
+            "Bacteria can't read DNA",
+            "Bacteria can't splice out introns, and cDNA has none",
+            "mRNA is more stable than DNA in bacteria",
+            "Genomic DNA is too short"
+          ],
+          "answer": 1,
+          "why": "Prokaryotes have no spliceosome. The human gene has introns that would stay in the transcript and wreck the protein. mRNA was already spliced, so cDNA from it has just the coding exons."
+        },
+        {
+          "seconds": 55,
+          "q": "A neuron is bathed in tetrodotoxin (blocks voltage-gated Na⁺ channels). A stimulus pushes the membrane from -70 mV to -60 mV. What happens?",
+          "choices": [
+            "A smaller action potential",
+            "No action potential: only a small local depolarization that fades",
+            "An action potential with no repolarization",
+            "The neuron hyperpolarizes"
+          ],
+          "answer": 1,
+          "why": "The rising phase of an action potential is the positive feedback of Na⁺ channels opening. Block them and -60 mV never reaches threshold with nothing to amplify it. It's a graded potential, and it decays."
+        },
+        {
+          "seconds": 55,
+          "q": "Yeast grown without oxygen consume glucose about 15 times faster than the same yeast with oxygen, at the same growth rate. Why?",
+          "choices": [
+            "Without oxygen glycolysis is inhibited, so they eat more to compensate",
+            "Fermentation yields about 2 ATP per glucose vs about 30 with oxidative phosphorylation",
+            "Oxygen is toxic to yeast",
+            "Anaerobic yeast make glucose from ethanol"
+          ],
+          "answer": 1,
+          "why": "Same ATP demand, 15 times less ATP per glucose, so 15 times more glucose. This is the Pasteur effect, and it's why a wine fermentation burns through sugar so fast."
+        },
+        {
+          "seconds": 55,
+          "q": "A population follows logistic growth with r = 0.5 per year and K = 1,000. At N = 500, what is dN/dt?",
+          "choices": [
+            "250",
+            "125",
+            "500",
+            "62.5"
+          ],
+          "answer": 1,
+          "why": "dN/dt = rN(1 - N/K) = 0.5 x 500 x (1 - 0.5) = 125 per year. At N = K/2, growth is as fast as it ever gets."
+        },
+        {
+          "seconds": 50,
+          "q": "A researcher adds a protein synthesis inhibitor to cells right after they make a hormone-responsive mRNA. Compared to untreated cells, the hormone will…",
+          "choices": [
+            "Still increase mRNA, but the encoded protein won't appear",
+            "Prevent transcription entirely",
+            "Increase protein levels twice as fast",
+            "Break down the mRNA instantly"
+          ],
+          "answer": 0,
+          "why": "Transcription and translation are separate steps. The inhibitor blocks ribosomes, not RNA polymerase, so mRNA still rises while the protein doesn't."
+        },
+        {
+          "seconds": 60,
+          "boss": true,
+          "q": "BOSS: E. coli grown for many generations in ¹⁵N medium are moved to ¹⁴N medium. After exactly TWO divisions, what does a density gradient of the DNA show?",
+          "choices": [
+            "100% hybrid density",
+            "50% heavy, 50% light",
+            "50% hybrid, 50% light",
+            "25% heavy, 75% light"
+          ],
+          "answer": 2,
+          "why": "Semi-conservative replication (Meselson and Stahl). After one division every molecule is ¹⁵N/¹⁴N, all hybrid. In the second, each hybrid separates into one hybrid and one light molecule, so half hybrid, half light. Zero heavy remains."
+        }
+      ]
+    }
+  ]
+}

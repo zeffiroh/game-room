@@ -1,0 +1,24 @@
+{
+  "cards": [
+    {
+      "type": "fact",
+      "title": "A fun fact",
+      "text": "Replace with a fun fact about your subject.",
+      "coins": 2
+    },
+    {
+      "type": "goal",
+      "title": "Class challenge",
+      "text": "Replace with a question everyone should know.",
+      "choices": [
+        "Right",
+        "Wrong",
+        "Wrong",
+        "Wrong"
+      ],
+      "answer": 0,
+      "goal": 0.75,
+      "bonus": 10
+    }
+  ]
+}

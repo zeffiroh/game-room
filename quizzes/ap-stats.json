@@ -1,0 +1,458 @@
+{
+  "id": "ap-stats",
+  "title": "AP Statistics",
+  "subject": "AP Statistics",
+  "icon": "chart",
+  "blurb": "Interpret data, designs, probabilities and inference the way the AP exam asks you to.",
+  "level": "AP / intro college",
+  "rounds": [
+    {
+      "id": "r1",
+      "title": "Round 1: Exploring data",
+      "intro": "Distributions, z-scores, transformations and regression. Show your work, not just your memory.",
+      "questions": [
+        {
+          "q": "Using the 1.5 × IQR rule, which of the extreme values are outliers?",
+          "scene": "Quiz scores have Q1 = 42 and Q3 = 58. The most extreme values in the data set are 15, 19, 81 and 84; all other scores lie between 30 and 70.",
+          "choices": [
+            "All four extreme values",
+            "15 and 84 only",
+            "84 only",
+            "None, since all four are within 1.5 IQR of the median"
+          ],
+          "answer": 1,
+          "why": "IQR = 16, so the fences are 42 - 24 = 18 and 58 + 24 = 82. 15 is below 18 and 84 is above 82; 19 and 81 are inside. The trap is measuring from the median instead of the quartiles.",
+          "seconds": 50
+        },
+        {
+          "q": "Who did better relative to their own class?",
+          "scene": "Maya scored 84 on an exam with mean 72 and SD 8. Jon scored 74 on a different exam with mean 65 and SD 5.",
+          "choices": [
+            "Maya: 84 is a higher raw score than 74",
+            "Maya: her exam had the larger SD, so it was harder to beat",
+            "Jon: his z-score is 1.8 versus Maya's 1.5",
+            "They tie, since both scored above their class mean"
+          ],
+          "answer": 2,
+          "why": "Maya: z = (84-72)/8 = 1.5. Jon: z = (74-65)/5 = 1.8. Raw scores from different distributions can't be compared; standardize first.",
+          "seconds": 45
+        },
+        {
+          "q": "What are the mean and SD of the temperatures in °F?",
+          "scene": "Daily temperatures in °C have mean 20 and SD 4. They are converted with F = 1.8C + 32.",
+          "choices": [
+            "Mean 52, SD 7.2",
+            "Mean 68, SD 4",
+            "Mean 68, SD 39.2",
+            "Mean 68, SD 7.2"
+          ],
+          "answer": 3,
+          "why": "Multiplying by 1.8 scales the mean and SD: mean = 1.8(20)+32 = 68, SD = 1.8(4) = 7.2. Adding 32 shifts the center but never changes the spread, so SD 39.2 is the trap.",
+          "seconds": 45
+        },
+        {
+          "q": "Which is the best interpretation of the slope?",
+          "scene": "A regression of exam score (points) on weekly study time (hours) gives ŷ = 25 + 3.2x.",
+          "choices": [
+            "Each extra hour of weekly study is associated with a predicted increase of 3.2 points",
+            "Studying one more hour will cause a 3.2-point gain",
+            "Each extra point goes with 3.2 more hours of studying",
+            "A student who studies 0 hours is predicted to score 3.2"
+          ],
+          "answer": 0,
+          "why": "The slope is the predicted change in y per one-unit increase in x. It describes association, not cause, and the units are points per hour, not hours per point.",
+          "seconds": 40
+        },
+        {
+          "q": "What is the residual for this student, and what does it mean?",
+          "scene": "A fitted line is ŷ = 40 + 2.5x. A student with x = 10 actually has y = 61.",
+          "choices": [
+            "+4; the line underestimates this student's y by 4",
+            "-4; the line underestimates this student's y by 4",
+            "-4; the line overestimates this student's y by 4",
+            "+21; the student is 21 above the line"
+          ],
+          "answer": 2,
+          "why": "Predicted = 40 + 25 = 65, and residual = actual - predicted = 61 - 65 = -4. Negative means the point sits below the line, so the line overpredicts. Subtracting in the wrong order flips the sign.",
+          "seconds": 50
+        },
+        {
+          "q": "Which statement is correct?",
+          "scene": "In a sample of 60 students, the correlation between daily TV hours and GPA is r = -0.80.",
+          "choices": [
+            "About 64% of the variation in GPA is accounted for by the linear relationship with TV hours",
+            "About 80% of the variation in GPA is explained by TV hours",
+            "About 64% of students fall exactly on the regression line",
+            "Each extra TV hour causes a 64% drop in GPA"
+          ],
+          "answer": 0,
+          "why": "r² = (-0.80)² = 0.64, the fraction of variation in y explained by the linear model. Using r instead of r² is the common slip, and no correlation proves cause.",
+          "seconds": 45
+        },
+        {
+          "q": "What are the new correlation and slope?",
+          "scene": "Heights (inches) and weights (pounds) of players have r = 0.70, and the least-squares slope is 4 lb per inch. All heights are converted to centimeters (1 in = 2.54 cm); weights stay in pounds.",
+          "choices": [
+            "r = 0.70, slope = 10.16 lb per cm",
+            "r ≈ 0.28, slope = 4 lb per cm",
+            "r = 0.70, slope = 4 lb per cm",
+            "r = 0.70, slope ≈ 1.57 lb per cm"
+          ],
+          "answer": 3,
+          "why": "Correlation has no units and is unchanged by linear rescaling. The slope is lb per unit of x, and one cm is smaller than one inch, so slope = 4/2.54 ≈ 1.57. Multiplying by 2.54 is the trap.",
+          "seconds": 55
+        },
+        {
+          "q": "What is the predicted y when x = 70?",
+          "scene": "For a sample, x̄ = 50, sx = 10, ȳ = 200, sy = 30 and r = 0.60.",
+          "choices": [
+            "260",
+            "236",
+            "224",
+            "218"
+          ],
+          "answer": 1,
+          "why": "Slope b = r(sy/sx) = 0.6(30/10) = 1.8, so ŷ = 200 + 1.8(70-50) = 236. 260 assumes x being 2 SDs above means y is also 2 SDs above, ignoring that r < 1 pulls the prediction toward the mean.",
+          "seconds": 70,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "title": "Round 2: Collecting data",
+      "intro": "Sampling, bias, experiments and what you are allowed to conclude.",
+      "questions": [
+        {
+          "q": "What sampling method is this?",
+          "scene": "A principal wants to survey students. She randomly picks 5 of the 20 homerooms and surveys every student in those 5 rooms.",
+          "choices": [
+            "Cluster sample",
+            "Stratified random sample",
+            "Simple random sample",
+            "Systematic sample"
+          ],
+          "answer": 0,
+          "why": "The homerooms are clusters, a few are chosen at random, and everyone in them is surveyed. Stratified would sample some students from every group; an SRS would give every set of students an equal chance, which this does not.",
+          "seconds": 40
+        },
+        {
+          "q": "What is the main concern about trusting 78% as the city's support?",
+          "scene": "A city mails a survey about a new tax to 2000 randomly chosen households. 340 are returned, and 78% of those favor the tax.",
+          "choices": [
+            "Undercoverage, because the sample was random",
+            "Response bias from leading question wording",
+            "Sampling variability, which random selection removes",
+            "Nonresponse bias: people who return mail surveys may differ from those who don't"
+          ],
+          "answer": 3,
+          "why": "Only 17% responded, and responders often feel strongly, so the results may not reflect the 2000 chosen. Random selection does not fix this, and sampling variability is not bias.",
+          "seconds": 50
+        },
+        {
+          "q": "Which conclusion is justified?",
+          "scene": "Researchers examine health records and find that adults who take vitamin D supplements have fewer fractures than adults who do not.",
+          "choices": [
+            "Vitamin D supplements reduce fractures",
+            "Vitamin D is associated with fewer fractures, but confounding (e.g. healthier habits) may explain it",
+            "The relationship is probably due to chance since no p-value was given",
+            "Nothing, because records are not a random sample"
+          ],
+          "answer": 1,
+          "why": "No treatment was assigned, so this is observational. People choosing supplements may also exercise more or eat better, which confounds. Only random assignment supports a causal claim.",
+          "seconds": 45
+        },
+        {
+          "q": "Why should she block by field?",
+          "scene": "An agronomist tests two fertilizers on 40 plots. Twenty plots are in a sandy field and twenty in a clay field, and soil strongly affects yield.",
+          "choices": [
+            "So she no longer needs random assignment",
+            "To make the sample large enough to generalize to all farms",
+            "To remove soil-type variability from the comparison, with random assignment of fertilizers within each field",
+            "To make the two fertilizer groups blind to the treatment"
+          ],
+          "answer": 2,
+          "why": "Blocking groups similar units so differences between fertilizers are not muddied by soil. Randomization still happens inside each block. Blocking is about reducing variability, not about replacing randomization.",
+          "seconds": 55
+        },
+        {
+          "q": "What can reasonably be concluded?",
+          "scene": "A study of 80 volunteers at one college randomly assigns half to a new sleep routine; the routine group shows significantly better memory scores.",
+          "choices": [
+            "The routine improves memory for all adults",
+            "The routine is only associated with better memory, since subjects volunteered",
+            "The result is meaningless because the groups were not random samples",
+            "The routine caused improved memory in volunteers like these, but generalizing wider is risky"
+          ],
+          "answer": 3,
+          "why": "Random assignment allows cause and effect within the study. Volunteers were not randomly selected, so inference to a larger population is limited. Volunteering affects scope, not causation.",
+          "seconds": 55
+        },
+        {
+          "q": "Why is the coin flip for order important?",
+          "scene": "Each of 24 runners tries both brand X and brand Y shoes on a 5 km course, with the order decided by a coin flip for each runner.",
+          "choices": [
+            "It makes the sample a simple random sample of runners",
+            "It keeps order effects such as fatigue or practice from being confounded with brand",
+            "It guarantees the runners cannot tell which brand is which",
+            "It makes a two-sample test appropriate"
+          ],
+          "answer": 1,
+          "why": "If everyone wore X first, a fatigue advantage for Y would be tangled with brand. Random order spreads that effect evenly. This is a matched-pairs design, so the analysis is on differences, not two independent groups.",
+          "seconds": 50
+        },
+        {
+          "q": "About how large must the sample be to get a margin of error of 2 points?",
+          "scene": "A poll of n = 600 voters has a margin of error of 4 percentage points at 95% confidence.",
+          "choices": [
+            "1200",
+            "1800",
+            "2400",
+            "3000"
+          ],
+          "answer": 2,
+          "why": "ME is proportional to 1/√n, so halving it requires 4 times the sample: 600 × 4 = 2400. Doubling n only cuts ME by a factor of 1/√2, the usual mistake.",
+          "seconds": 50
+        },
+        {
+          "q": "Which conclusion is best supported?",
+          "scene": "A researcher randomly samples 500 households in a city; 320 agree to take part. The 320 are randomly assigned to get a free smart thermostat or not, and the thermostat group uses significantly less energy.",
+          "choices": [
+            "Thermostats cause lower use among households willing to participate; nonresponse limits generalizing to the whole city",
+            "Thermostats cause lower use in all city households, since both selection and assignment were random",
+            "Only an association exists, because households chose whether to take part",
+            "Nothing can be concluded unless households were blind to their thermostat"
+          ],
+          "answer": 0,
+          "why": "Random assignment supports causation. But the initial random sample was damaged by 36% nonresponse, so the participants are effectively volunteers. Blinding isn't possible here and doesn't void the result.",
+          "seconds": 75,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "title": "Round 3: Probability and random variables",
+      "intro": "Conditional probability, distributions, combining variables and sampling distributions.",
+      "questions": [
+        {
+          "q": "A randomly chosen student owns a laptop. What is the probability they take AP?",
+          "scene": "30% of students take AP. Of AP students, 80% own a laptop; of non-AP students, 50% do.",
+          "choices": [
+            "0.80",
+            "0.24",
+            "0.407",
+            "0.59"
+          ],
+          "answer": 2,
+          "why": "P(AP and laptop) = 0.3(0.8) = 0.24 and P(laptop) = 0.24 + 0.7(0.5) = 0.59, so P(AP | laptop) = 0.24/0.59 ≈ 0.407. 0.80 is P(laptop | AP), the reversed condition.",
+          "seconds": 65
+        },
+        {
+          "q": "Which statement is true about A and B?",
+          "scene": "P(A) = 0.40, P(B) = 0.50 and P(A or B) = 0.70.",
+          "choices": [
+            "They are independent but not mutually exclusive",
+            "They are mutually exclusive",
+            "They are both independent and mutually exclusive",
+            "They are neither independent nor mutually exclusive"
+          ],
+          "answer": 0,
+          "why": "P(A and B) = 0.4 + 0.5 - 0.7 = 0.2 = (0.4)(0.5), so they are independent. Since P(A and B) is not 0 they are not mutually exclusive; in fact, mutually exclusive events with positive probability can never be independent.",
+          "seconds": 55
+        },
+        {
+          "q": "What is the probability she makes at least 8?",
+          "scene": "A basketball player makes each free throw with probability 0.7, independently. She shoots 10.",
+          "choices": [
+            "≈ 0.233",
+            "≈ 0.383",
+            "≈ 0.617",
+            "≈ 0.149"
+          ],
+          "answer": 1,
+          "why": "P(8) = 45(0.7)^8(0.3)^2 ≈ 0.233, P(9) ≈ 0.121, P(10) ≈ 0.028, which add to ≈ 0.383. 0.233 is only exactly 8; 0.617 is the complement, P(at most 7).",
+          "seconds": 70
+        },
+        {
+          "q": "What is the probability the first success occurs on exactly the 4th trial?",
+          "scene": "Each trial of an experiment succeeds with probability 0.2, independently. Trials are repeated until the first success.",
+          "choices": [
+            "0.8⁴ ≈ 0.410",
+            "0.2⁴ ≈ 0.0016",
+            "0.8⁴(0.2) ≈ 0.082",
+            "0.8³(0.2) ≈ 0.102"
+          ],
+          "answer": 3,
+          "why": "Geometric: three failures then a success, 0.8³ × 0.2 = 0.1024. 0.8⁴ is the chance of four failures, and 0.8⁴(0.2) would put the success on trial 5.",
+          "seconds": 50
+        },
+        {
+          "q": "What are the mean and SD of D?",
+          "scene": "Independent random variables: X has mean 50 and SD 6; Y has mean 40 and SD 8. Let D = X - Y.",
+          "choices": [
+            "Mean 10, SD 10",
+            "Mean 10, SD 2",
+            "Mean 10, SD 14",
+            "Mean 90, SD 10"
+          ],
+          "answer": 0,
+          "why": "Means subtract: 50 - 40 = 10. Variances add, even for a difference: 36 + 64 = 100, so SD = 10. Subtracting SDs (2) or adding them (14) is the classic error.",
+          "seconds": 55
+        },
+        {
+          "q": "Approximately what is P(p̂ ≥ 0.40)?",
+          "scene": "The true proportion of voters favoring a measure is p = 0.30. A random sample of n = 100 is taken.",
+          "choices": [
+            "≈ 0.023",
+            "≈ 0.159",
+            "≈ 0.369",
+            "≈ 0.015"
+          ],
+          "answer": 3,
+          "why": "SD of p̂ = √(0.3·0.7/100) ≈ 0.0458, so z = 0.10/0.0458 ≈ 2.18 and the tail is ≈ 0.015. Using SD 0.05 gives 0.023, and using SD 0.10 gives 0.159; np = 30 and n(1-p) = 70 both exceed 10, so Normal is fine.",
+          "seconds": 70
+        },
+        {
+          "q": "Which describes the sampling distribution of x̄?",
+          "scene": "A population is strongly right-skewed with mean 20 and SD 15. Samples of n = 36 are drawn and x̄ is recorded each time.",
+          "choices": [
+            "Mean 20, SD 15, right-skewed like the population",
+            "Mean 20, SD 2.5, approximately Normal",
+            "Mean 20, SD 2.5, right-skewed like the population",
+            "Mean 3.33, SD 2.5, approximately Normal"
+          ],
+          "answer": 1,
+          "why": "The mean of x̄ is μ = 20 and the SD is σ/√n = 15/6 = 2.5. With n = 36 the CLT makes x̄ roughly Normal despite the skewed population. The sampling distribution is not the population distribution.",
+          "seconds": 55
+        },
+        {
+          "q": "What are the mean and SD of the total payout?",
+          "scene": "A policy pays $0 with probability 0.90, $1000 with probability 0.08 and $5000 with probability 0.02. An insurer sells 100 independent policies.",
+          "choices": [
+            "Mean $18,000, SD $74,000",
+            "Mean $18,000, SD $740",
+            "Mean $18,000, SD $7,400",
+            "Mean $180, SD $740"
+          ],
+          "answer": 2,
+          "why": "Per policy: mean = 80 + 100 = 180; E(X²) = 580,000 so variance = 580,000 - 180² = 547,600 and SD = 740. For 100 policies, mean = 18,000 and SD = 740√100 = 7,400. SDs scale by √n, not n.",
+          "seconds": 80,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r4",
+      "title": "Round 4: Inference",
+      "intro": "Intervals, tests, errors, chi-square and picking the right procedure.",
+      "questions": [
+        {
+          "q": "Which interpretation is correct?",
+          "scene": "A 95% confidence interval for mean commute time, based on a random sample of 50 workers, is (22.1, 26.9) minutes.",
+          "choices": [
+            "There is a 95% probability the true mean lies in (22.1, 26.9)",
+            "95% of workers have commutes between 22.1 and 26.9 minutes",
+            "95% of sample means fall between 22.1 and 26.9",
+            "If we repeated the sampling many times, about 95% of such intervals would contain the true mean"
+          ],
+          "answer": 3,
+          "why": "Confidence is about the method's long-run capture rate. The true mean is fixed, so this one interval either contains it or doesn't. The interval is for μ, not for individual commutes.",
+          "seconds": 55
+        },
+        {
+          "q": "What does the p-value 0.03 mean?",
+          "scene": "A test of H0: p = 0.5 versus Ha: p > 0.5 gives a p-value of 0.03.",
+          "choices": [
+            "If p were truly 0.5, a sample result this extreme or more would occur about 3% of the time",
+            "There is a 3% chance that H0 is true",
+            "There is a 97% chance that Ha is true",
+            "The result happened by chance 3% of the time"
+          ],
+          "answer": 0,
+          "why": "The p-value is P(data this extreme | H0 true), not the probability H0 is true. Hypotheses are about fixed parameters, so they get no probability from a frequentist test.",
+          "seconds": 50
+        },
+        {
+          "q": "Which change increases power without raising the Type I error rate?",
+          "scene": "A company tests a drug at α = 0.05 with n = 50 per group.",
+          "choices": [
+            "Increase α to 0.10",
+            "Decrease α to 0.01",
+            "Use a smaller sample to reduce variability",
+            "Increase the sample size to n = 200 per group"
+          ],
+          "answer": 3,
+          "why": "Larger n shrinks the SE, making it easier to detect a true difference while α stays 0.05. Raising α also increases power but raises Type I error; lowering α reduces power.",
+          "seconds": 50
+        },
+        {
+          "q": "What is the test result for H0: the die is fair?",
+          "scene": "A die is rolled 120 times. Counts for faces 1 to 6 are 15, 25, 20, 22, 18, 20.",
+          "choices": [
+            "χ² = 2.9 with df = 6; no convincing evidence",
+            "χ² = 58 with df = 5; reject H0",
+            "χ² = 2.9 with df = 5; no convincing evidence the die is unfair",
+            "χ² = 2.9 with df = 5; reject H0"
+          ],
+          "answer": 2,
+          "why": "Expected = 20 each; χ² = (25+25+0+4+4+0)/20 = 2.9. df = 6 - 1 = 5 and the 0.05 critical value is 11.07, far above 2.9. Forgetting to divide by expected gives 58.",
+          "seconds": 70
+        },
+        {
+          "q": "What is the 95% confidence interval for the true slope? (t* for df = 20 is 2.086)",
+          "scene": "Computer output for a regression based on n = 22 data points: slope coefficient 0.48 with SE 0.15 (t = 3.20, P = 0.005); R-sq = 36.4%.",
+          "choices": [
+            "(0.19, 0.77)",
+            "(0.17, 0.79)",
+            "(0.33, 0.63)",
+            "(0.03, 0.93)"
+          ],
+          "answer": 1,
+          "why": "df = n - 2 = 20, margin = 2.086(0.15) ≈ 0.313, giving 0.48 ± 0.313. Using z = 1.96 narrows it to (0.19, 0.77); using only ±SE gives (0.33, 0.63).",
+          "seconds": 65
+        },
+        {
+          "q": "Which procedure is appropriate?",
+          "scene": "25 patients have blood pressure measured before and after a month on a new diet. The researcher wants to know if the diet lowers mean pressure.",
+          "choices": [
+            "Two-sample t-test comparing before and after groups",
+            "Two-proportion z-test",
+            "One-sample t-test on the 25 before-minus-after differences",
+            "Chi-square test of homogeneity"
+          ],
+          "answer": 2,
+          "why": "The same patients appear in both measurements, so the data are paired. Analyze the differences, which removes patient-to-patient variability. A two-sample test wrongly treats the groups as independent.",
+          "seconds": 50
+        },
+        {
+          "q": "What is the test statistic?",
+          "scene": "Group A: 45 successes out of 100. Group B: 30 successes out of 100. We test H0: pA = pB versus Ha: pA ≠ pB.",
+          "choices": [
+            "z ≈ 2.19 (using the pooled proportion 0.375)",
+            "z ≈ 2.22 (using unpooled standard error)",
+            "z ≈ 3.10",
+            "z ≈ 1.55"
+          ],
+          "answer": 0,
+          "why": "Under H0 use pooled p̂ = 75/200 = 0.375, so SE = √(0.375·0.625·(1/100+1/100)) ≈ 0.0685 and z = 0.15/0.0685 ≈ 2.19. Unpooled SE is for confidence intervals; 3.10 drops the second sample.",
+          "seconds": 75
+        },
+        {
+          "q": "Approximately what is the power of the test?",
+          "scene": "Test H0: p = 0.5 versus Ha: p > 0.5 at α = 0.05 with n = 100. Suppose the truth is p = 0.6.",
+          "choices": [
+            "≈ 0.36",
+            "≈ 0.64",
+            "≈ 0.05",
+            "≈ 0.84"
+          ],
+          "answer": 1,
+          "why": "Reject if p̂ > 0.5 + 1.645(0.05) ≈ 0.582. With p = 0.6, SD = √(0.24/100) ≈ 0.049, z = (0.582 - 0.6)/0.049 ≈ -0.36, so power = P(z > -0.36) ≈ 0.64. The 0.36 is β, the Type II error probability, which is the complement.",
+          "seconds": 90,
+          "boss": true
+        }
+      ]
+    }
+  ]
+}

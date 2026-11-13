@@ -1,0 +1,436 @@
+{
+  "id": "comparative-religion",
+  "title": "Comparative Religion",
+  "subject": "Religious studies",
+  "icon": "book",
+  "blurb": "Compare scriptures, core ideas, practices and histories across the world's major religious traditions.",
+  "level": "High school / intro college",
+  "rounds": [
+    {
+      "id": "r1",
+      "title": "Round 1: Founders, texts and canons",
+      "intro": "Religious traditions preserve their teachings in sacred texts and collections. See if you can match each text to its tradition and its role.",
+      "questions": [
+        {
+          "q": "The word Tanakh is an acronym for which three sections of the Hebrew Bible?",
+          "choices": [
+            "Torah, Nevi'im, Ketuvim",
+            "Torah, Talmud, Midrash, the three core rabbinic collections",
+            "Torah, Mishnah, Gemara",
+            "Law, Gospels, Epistles"
+          ],
+          "answer": 0,
+          "why": "Tanakh stands for Torah (Teaching), Nevi'im (Prophets) and Ketuvim (Writings). Talmud, Mishnah and Gemara are later rabbinic works, not parts of the Tanakh.",
+          "seconds": 30
+        },
+        {
+          "q": "Which description fits a hadith?",
+          "scene": "A Muslim scholar cites a report of something the Prophet Muhammad said or did, traced back through a named chain of narrators.",
+          "choices": [
+            "A commentary explaining the meaning of Qur'an verses",
+            "A report of the Prophet's words or deeds, with its chain of narrators",
+            "The psalms that Muslims believe were revealed to David",
+            "A legal ruling made within one school of Islamic law"
+          ],
+          "answer": 1,
+          "why": "Hadith are reports about Muhammad, evaluated by their chain of transmission. Tafsir explains the Qur'an and fiqh is legal reasoning built on the Qur'an and hadith, so they are easy to confuse with it.",
+          "seconds": 35
+        },
+        {
+          "q": "The Pali Canon of Theravada Buddhism is called the Tipitaka, or 'three baskets'. Two baskets are Vinaya (monastic rules) and Sutta (discourses). What is the third?",
+          "choices": [
+            "Tantra",
+            "Lotus Sutra",
+            "Abhidhamma",
+            "Dhammapada only"
+          ],
+          "answer": 2,
+          "why": "The third basket is the Abhidhamma, a systematic analysis of mind and experience. The Dhammapada is a single book inside the Sutta basket, and the Lotus Sutra belongs to Mahayana collections, not the Pali Canon.",
+          "seconds": 35
+        },
+        {
+          "q": "Which scripture is this?",
+          "scene": "A gurdwara keeps a scripture on a raised seat under a canopy and treats it with the honor given to a living teacher. Its hymns include verses by poets such as Kabir and Farid, alongside those of the Sikh Gurus.",
+          "choices": [
+            "The Bhagavad Gita",
+            "The Avesta",
+            "The Kitab-i-Aqdas of Bahá'u'lláh",
+            "Guru Granth Sahib"
+          ],
+          "answer": 3,
+          "why": "Sikhs honor the Guru Granth Sahib as the eternal Guru, and it includes hymns by non-Sikh saints. The Gita is a Hindu text, the Avesta is Zoroastrian and the Kitab-i-Aqdas is a Bahá'í book.",
+          "seconds": 40
+        },
+        {
+          "q": "Which assignment of sources is correct?",
+          "scene": "Passage A: 'To govern by virtue is like the pole star, which keeps its place while all the other stars turn toward it.' Passage B: 'The Dao that can be spoken is not the constant Dao.'",
+          "choices": [
+            "A: Analects; B: Dao De Jing",
+            "A is from the Dao De Jing; B is from the Analects",
+            "Both are from the Analects",
+            "A is from the Dao De Jing; B is from the Mencius"
+          ],
+          "answer": 0,
+          "why": "Passage A is Analects 2.1, a Confucian text about moral leadership. Passage B opens the Dao De Jing, which says the ultimate Dao cannot be fully captured in words.",
+          "seconds": 45
+        },
+        {
+          "q": "The Avesta, whose oldest hymns (the Gathas) are attributed to Zarathustra, is the sacred collection of which tradition?",
+          "choices": [
+            "Jainism",
+            "Sikhism",
+            "Manichaeism, the religion of Mani",
+            "Zoroastrianism"
+          ],
+          "answer": 3,
+          "why": "Zoroastrians use the Avesta in worship, and the Gathas are its oldest layer. Manichaeism was a separate religion founded by Mani that borrowed some Persian themes.",
+          "seconds": 30
+        },
+        {
+          "q": "Hindu tradition often separates shruti ('heard' revelation) from smriti ('remembered' tradition). Which text is usually classed as smriti?",
+          "choices": [
+            "The Rig Veda",
+            "The Upanishads, the Vedic philosophical texts",
+            "The Bhagavad Gita",
+            "The Brahmanas"
+          ],
+          "answer": 2,
+          "why": "The Gita is part of the epic Mahabharata, so it is smriti. The Vedas, Brahmanas and Upanishads make up shruti, though many Hindus treat the Gita with equal reverence.",
+          "seconds": 40
+        },
+        {
+          "q": "Which statement about the Old Testament and Tanakh is accurate?",
+          "scene": "Books such as Tobit, Judith and Wisdom of Solomon appear in some Christian Bibles but not in the Hebrew Bible.",
+          "choices": [
+            "Protestant Old Testaments match Catholic ones in contents, and both differ from the Tanakh in book count",
+            "The Tanakh includes Tobit and Wisdom, and Protestants removed them",
+            "Eastern Orthodox Bibles contain fewer Old Testament books than Protestant Bibles",
+            "Protestant Bibles follow the Hebrew canon; Catholic and Orthodox add deuterocanonical books"
+          ],
+          "answer": 3,
+          "why": "Protestants generally use the Hebrew canon's contents, though arranged differently. Catholics and Orthodox include deuterocanonical books, and the Orthodox lists vary and are often the longest. The Tanakh does not include these books.",
+          "seconds": 55,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "title": "Round 2: Big ideas compared",
+      "intro": "Similar words can hide very different ideas. Decide what sets neighboring concepts apart.",
+      "questions": [
+        {
+          "q": "Which pairing of teachers and traditions fits?",
+          "scene": "Teacher A: 'Each person has an unchanging inner self that is ultimately identical with ultimate reality.' Teacher B: 'What we call a self is a changing bundle of parts with no permanent core.'",
+          "choices": [
+            "A: Theravada Buddhist; B: Advaita Vedanta",
+            "A: Advaita Vedanta; B: Buddhist",
+            "A: Jain; B: Advaita Vedanta",
+            "A: Jain; B: Buddhist"
+          ],
+          "answer": 1,
+          "why": "Advaita Vedanta teaches atman is Brahman, while Buddhists teach anatta, no permanent self. Jains also teach an eternal soul (jiva) but do not identify it with Brahman, so A is not Jain.",
+          "seconds": 50
+        },
+        {
+          "q": "Muslims stress that associating partners with God (shirk) is the gravest wrong. Which concept does this protect?",
+          "choices": [
+            "Covenant at Sinai",
+            "Karma",
+            "Tawhid, God's oneness",
+            "Advaita, the non-dual unity of self and Brahman"
+          ],
+          "answer": 2,
+          "why": "Tawhid is the central Islamic teaching that God is one and has no partners. Advaita also speaks of oneness, but of the identity of self and Brahman, not a creator distinct from creation.",
+          "seconds": 35
+        },
+        {
+          "q": "In the 1500s, Protestant Reformers such as Luther stressed justification by faith alone. Which statement best describes the Catholic response at the Council of Trent?",
+          "choices": [
+            "People earn salvation through good works apart from God's grace, so faith is secondary",
+            "Faith plays no role, because salvation is decided by works",
+            "Everyone is predestined to an outcome regardless of faith",
+            "Grace comes first, and faith works through good deeds and the sacraments"
+          ],
+          "answer": 3,
+          "why": "Trent taught that grace comes first and that people cooperate with it. Reformers also taught that good works follow from faith, so the debate was about how faith, grace and works relate, not whether works matter.",
+          "seconds": 50
+        },
+        {
+          "q": "A student writes that Hindus and Buddhists both seek liberation from rebirth. Which distinction is accurate?",
+          "choices": [
+            "Moksha is release of the atman; nirvana is the ending of craving without a permanent self",
+            "Hindus call it nirvana and teach no self; Buddhists call it moksha and teach an eternal atman",
+            "Buddhists reject rebirth, while Hindus accept it",
+            "The two ideas are identical in every school"
+          ],
+          "answer": 0,
+          "why": "Both traditions teach samsara and a path out of it, but they define the goal differently, and each tradition has internal variety. The terms are not simply swappable.",
+          "seconds": 45
+        },
+        {
+          "q": "Which statement best compares Jain and Buddhist approaches to non-harm?",
+          "scene": "A Jain monk sweeps the ground ahead of him to avoid crushing insects. A Theravada monk also keeps the precept against killing.",
+          "choices": [
+            "Buddhists forbid harm to insects, while Jains consider only the intention behind an act",
+            "Jains avoid even unintended harm, and Buddhists give intention central weight",
+            "Only Jains believe in rebirth",
+            "Only Buddhists practice non-violence"
+          ],
+          "answer": 1,
+          "why": "Both traditions value ahimsa. Jain practice is stricter and sees all living beings as having souls. Buddhists focus on the intention behind an act, so the two are often mixed up.",
+          "seconds": 50
+        },
+        {
+          "q": "In Islam, Muhammad is called the 'Seal of the Prophets'. What does this phrase express?",
+          "choices": [
+            "He is regarded as divine, the son of God, and an object of worship",
+            "He was the first prophet, before Adam",
+            "He is the final prophet after Abraham, Moses and Jesus",
+            "He is the final avatar of Vishnu"
+          ],
+          "answer": 2,
+          "why": "Muslims teach that prophets came to every people and that Muhammad completes the line. Some groups, such as Bahá'ís, teach progressive revelation with later messengers, and Muslims in general do not accept that.",
+          "seconds": 40
+        },
+        {
+          "q": "Which concept is described?",
+          "scene": "A rabbi explains that Jewish identity involves a relationship with God shaped by commitments, from God's promises to Noah and Abraham to the giving of the commandments at Sinai.",
+          "choices": [
+            "Hukam, the divine order in Sikhism",
+            "Tawhid, the oneness of God",
+            "Moksha, liberation from rebirth",
+            "Berit, covenant"
+          ],
+          "answer": 3,
+          "why": "Berit means covenant, a binding relationship with obligations on both sides. Hukam is Sikh divine order and moksha is a Hindu goal, so they do not describe Sinai.",
+          "seconds": 40
+        },
+        {
+          "q": "Which pairing of tradition and view of ultimate reality is most accurate?",
+          "choices": [
+            "Advaita Vedanta: Brahman identical with atman; Islam: one transcendent creator",
+            "Advaita Vedanta: a creator distinct from all souls; Islam: ultimate reality identical with the self",
+            "Daoism: a personal creator who issues commandments; Judaism: an impersonal force",
+            "Theravada Buddhism: an eternal creator God; Sikhism: no divine reality"
+          ],
+          "answer": 0,
+          "why": "Advaita is one school of Vedanta, and other Hindu schools see God as distinct from souls. In Islam the Creator is wholly distinct from creation. The Dao is generally described as an impersonal source, and Sikhs teach one God.",
+          "seconds": 60,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "title": "Round 3: Practice, calendar and sacred space",
+      "intro": "Religions are lived as well as believed. Match the rituals, festivals and places to their traditions.",
+      "questions": [
+        {
+          "q": "Which pilgrimage is described?",
+          "scene": "Pilgrims wear simple white garments, circle the Kaaba in Mecca seven times and later stand together on the plain of Arafat.",
+          "choices": [
+            "Kumbh Mela",
+            "Camino de Santiago",
+            "Hajj",
+            "Pilgrimage to Bodh Gaya"
+          ],
+          "answer": 2,
+          "why": "These are rites of the Hajj, which Muslims who are able are expected to perform once. Kumbh Mela is a Hindu gathering at sacred rivers, and Bodh Gaya is a Buddhist site.",
+          "seconds": 35
+        },
+        {
+          "q": "Which statement about fasting is accurate?",
+          "choices": [
+            "Yom Kippur lasts a whole lunar month, while Ramadan is a single fast of about a day",
+            "Ramadan is a single fast of about 25 hours, while Yom Kippur is a daily fast lasting a lunar month",
+            "In Islam, Lent is the fast that runs from dawn to sunset throughout a lunar month",
+            "Ramadan is a daily dawn-to-sunset fast for a month; Yom Kippur is one fast of about 25 hours"
+          ],
+          "answer": 3,
+          "why": "Muslims fast daily during Ramadan, and Jews fast once on Yom Kippur from sunset to nightfall. Lent is a Christian season of preparation before Easter, and fasting practices within it vary by church.",
+          "seconds": 40
+        },
+        {
+          "q": "Diwali season is observed by several Indian traditions. Which pairing is accurate?",
+          "choices": [
+            "Jains remember Mahavira's liberation; Sikhs mark Bandi Chhor Divas",
+            "Jains mark Buddha's enlightenment; Sikhs mark the birth of Guru Nanak in spring",
+            "Both Jains and Sikhs mark Rama's return to Ayodhya",
+            "Sikhs remember Mahavira's liberation; Jains mark the founding of the Khalsa"
+          ],
+          "answer": 0,
+          "why": "Many Hindus link Diwali to Rama's return and to Lakshmi. Jains and Sikhs have their own stories for the same season. Guru Nanak's birthday is a separate festival close in time, which causes mix-ups.",
+          "seconds": 50
+        },
+        {
+          "q": "In Theravada tradition, Vesak (Visakha Puja) commemorates which events?",
+          "choices": [
+            "The Buddha's first sermon only",
+            "Buddha's birth, enlightenment, death",
+            "The birth of Mahavira",
+            "The arrival of Buddhism in China under the Han"
+          ],
+          "answer": 1,
+          "why": "Theravada communities mark all three events on one full-moon day. The first sermon is remembered on a different holy day, and some Mahayana communities celebrate the Buddha's birth on a separate date.",
+          "seconds": 40
+        },
+        {
+          "q": "Which practice and principle are described?",
+          "scene": "At a gurdwara, visitors of every background sit in rows on the floor and share the same vegetarian meal, prepared and served by volunteers.",
+          "choices": [
+            "Iftar, a meal that breaks the Ramadan fast",
+            "Dana, giving food to monastics",
+            "Langar, the Sikh community kitchen",
+            "The Seder, a Passover meal that retells the Exodus"
+          ],
+          "answer": 2,
+          "why": "Langar is a Sikh community kitchen that welcomes everyone, reflecting equality and seva. Dana is Buddhist giving, often directed to monastics, so it does not match.",
+          "seconds": 40
+        },
+        {
+          "q": "Which pairing of day and observance is accurate?",
+          "choices": [
+            "Jewish Shabbat runs Saturday sunrise to sunset; Muslims worship in congregation on Sunday",
+            "Shabbat is Friday sunset to Saturday nightfall; Muslims hold Jumu'ah on Friday",
+            "Shabbat is on Sunday; Christians worship on Friday",
+            "Jumu'ah is on Saturday; Shabbat is Friday morning only"
+          ],
+          "answer": 1,
+          "why": "Shabbat begins at sundown on Friday. Many Christians gather on Sunday to mark the Resurrection, and Muslims hold the weekly Friday midday prayer, which is not a day of mandated rest.",
+          "seconds": 45
+        },
+        {
+          "q": "Which set of rites of passage is correctly matched?",
+          "choices": [
+            "Bar/Bat Mitzvah: Jewish; Upanayana: Hindu thread; Confirmation: Catholic",
+            "Upanayana: Sikh initiation; Amrit Sanchar: Hindu thread ceremony",
+            "Pabbajja: Jewish coming of age; Bar Mitzvah: Buddhist ordination as a novice",
+            "Aqiqah: Hindu thread ceremony; Confirmation: Jewish coming of age"
+          ],
+          "answer": 0,
+          "why": "Amrit Sanchar is the Sikh initiation into the Khalsa, and Pabbajja is going forth as a Buddhist novice. Aqiqah is a Muslim ceremony for a newborn. Upanayana is performed in some Hindu communities.",
+          "seconds": 50
+        },
+        {
+          "q": "Why does Passover always fall in spring in the Northern Hemisphere, while Ramadan moves through all the seasons?",
+          "choices": [
+            "Both use purely solar calendars, but Ramadan is adjusted by tradition to fall at varying times",
+            "The Jewish calendar is lunisolar with a leap month; the Islamic has 12 lunar months, no leap month",
+            "The Jewish calendar is solar and the Islamic calendar is lunisolar",
+            "Both are purely lunar, but Passover is fixed by priestly decree"
+          ],
+          "answer": 1,
+          "why": "Adding a leap month keeps the Jewish calendar aligned with the seasons. The Islamic calendar is purely lunar, so Ramadan shifts about 11 days earlier each year in the solar calendar.",
+          "seconds": 55,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r4",
+      "title": "Round 4: History, schisms and branches",
+      "intro": "Traditions grow, divide and spread. Sort out who split from whom, and how religions traveled.",
+      "questions": [
+        {
+          "q": "Which statement describes the main Sunni and Shia positions on leadership after Muhammad's death in 632?",
+          "choices": [
+            "Shia held that the community elects the caliph, while Sunnis held that Ali's descendants have divinely designated authority",
+            "Sunnis held that only Muhammad's descendants may lead, while Shia held that leaders are elected",
+            "Both groups agree that Ali was the first caliph",
+            "Sunnis accepted caliphs chosen by consultation; Shia hold Muhammad designated Ali and his descendants"
+          ],
+          "answer": 3,
+          "why": "This is the root of the Sunni/Shia divide. The first option reverses the two positions. Ali did become the fourth Sunni caliph, but only after Abu Bakr, Umar and Uthman.",
+          "seconds": 50
+        },
+        {
+          "q": "Which pairing of Buddhist tradition and emphasis is accurate?",
+          "choices": [
+            "Theravada: Pali Canon, Sri Lanka; Mahayana: bodhisattva ideal, East Asia; Vajrayana: tantric methods, Tibet",
+            "Theravada: tantric methods, strong in Tibet; Vajrayana: Pali Canon, strong in Sri Lanka",
+            "Mahayana: Pali Canon only; Theravada: bodhisattva ideal in East Asia",
+            "Vajrayana: based on the Vedas and strong in India; Mahayana: strong in Thailand and Sri Lanka, with the Pali Canon as its core"
+          ],
+          "answer": 0,
+          "why": "These are broad generalizations, since every tradition has diversity, and Vajrayana grew out of Mahayana. Thailand and Sri Lanka are mainly Theravada, and Vajrayana is not based on the Vedas.",
+          "seconds": 55
+        },
+        {
+          "q": "Which statement about Christian divisions is accurate?",
+          "choices": [
+            "In 1054, Protestants split from Rome over papal authority; in 1517, the Orthodox split from Constantinople over the filioque",
+            "In 1054 Rome and Constantinople split over papal authority and the filioque; in 1517 Luther began the Reformation",
+            "The Council of Nicaea in 325 separated Catholics from Orthodox",
+            "The Reformation and the Great Schism were the same event in 1054"
+          ],
+          "answer": 1,
+          "why": "The Great Schism split Western and Eastern Christianity, with mutual excommunications in 1054. The Reformation came about 460 years later and created Protestant churches. Nicaea was a unifying council.",
+          "seconds": 55
+        },
+        {
+          "q": "Which Jewish movement is described?",
+          "scene": "A congregation holds that halakha (Jewish law) is binding and develops through rabbinic interpretation. It also accepts modern historical study of the texts and allows change through a legal process.",
+          "choices": [
+            "Orthodox Judaism",
+            "Reform Judaism",
+            "Conservative (Masorti) Judaism",
+            "Reconstructionist Judaism, led by Mordecai Kaplan"
+          ],
+          "answer": 2,
+          "why": "Conservative Judaism combines a commitment to halakha with historical study. Orthodox Judaism generally holds that halakha comes from Sinai, and Reform emphasizes individual interpretation of ethics over strict legal obligation.",
+          "seconds": 45
+        },
+        {
+          "q": "Which pairing about origins is accurate?",
+          "choices": [
+            "Guru Nanak founded Jainism; Mahavira founded Sikhism",
+            "Rishabhanatha is the 24th Jain Tirthankara and a contemporary of the Buddha; Kabir founded Sikhism in Punjab",
+            "Mahavira was the first Jain teacher; Sikhism began in Bengal",
+            "Mahavira, a contemporary of the Buddha, is the 24th Tirthankara; Guru Nanak founded Sikhism in Punjab"
+          ],
+          "answer": 3,
+          "why": "Jains see their tradition as eternal, with Mahavira as the last of 24 Tirthankaras, and Rishabhanatha as the first. Kabir's verses appear in the Guru Granth Sahib, but Kabir did not found Sikhism.",
+          "seconds": 50
+        },
+        {
+          "q": "Who do Bahá'ís regard as the founder-prophet of their faith, which emerged in 19th-century Persia?",
+          "choices": [
+            "Bahá'u'lláh, who followed the Báb as forerunner",
+            "The Báb alone, with no later figure",
+            "Mirza Ghulam Ahmad, founder of the Ahmadiyya movement",
+            "Guru Nanak"
+          ],
+          "answer": 0,
+          "why": "Bahá'ís teach that Bahá'u'lláh fulfilled the Báb's promise of a coming messenger and that revelation is progressive. Ahmadiyya is a separate 19th-century movement that began in Punjab.",
+          "seconds": 40
+        },
+        {
+          "q": "Which statement about how religions spread along trade routes is best supported?",
+          "choices": [
+            "Buddhism reached China by sea from Japan, and Islam reached West Africa along the Silk Road",
+            "Buddhism entered China along Silk Road routes; Islam reached Southeast Asia through Indian Ocean trade",
+            "Hinduism spread to Europe along the Silk Road, and Buddhism reached Arabia by sea in the 7th century as the main religion of Arabian traders",
+            "Judaism spread mainly by missionary kings in the Americas"
+          ],
+          "answer": 1,
+          "why": "Merchants, monks and travelers carried religions along Silk Road and Indian Ocean routes. Buddhism came to China from the west, and Japan received it from the mainland. Islam reached West Africa mainly across trans-Saharan trade routes.",
+          "seconds": 50
+        },
+        {
+          "q": "Twelver, Ismaili and Zaydi Shia all honor Ali but differ on the line of imams. Which statement is accurate?",
+          "choices": [
+            "All Shia groups recognize exactly twelve imams",
+            "Twelvers trace the imamate through Ismail, son of Ja'far al-Sadiq, while Ismailis believe the twelfth imam is in hiding, and Zaydis accept it too",
+            "Twelvers follow twelve imams, the last in occultation; Ismailis follow Ismail; Zaydis follow Zayd ibn Ali as fifth imam",
+            "Zaydis believe the twelfth imam is in occultation, while Twelvers follow Zayd ibn Ali"
+          ],
+          "answer": 2,
+          "why": "Succession disputes created different Shia branches. Ismailis split over Ismail after Ja'far al-Sadiq, and Zaydis recognize Zayd as the fifth imam and do not teach a hidden twelfth imam.",
+          "seconds": 60,
+          "boss": true
+        }
+      ]
+    }
+  ]
+}

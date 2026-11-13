@@ -1,0 +1,422 @@
+{
+  "id": "ap-bio-deep",
+  "title": "AP Biology: Deep Cuts",
+  "subject": "AP Biology",
+  "icon": "dna",
+  "blurb": "Free-response-style experiments, data and calculations across molecules, genes, evolution and ecology.",
+  "level": "AP / intro college",
+  "rounds": [
+    {
+      "id": "r1",
+      "title": "Round 1: Molecules, enzymes and energy",
+      "intro": "Enzyme curves, proton gradients and a little arithmetic. Read the scenario, then predict what happens.",
+      "questions": [
+        {
+          "q": "What kind of inhibitor is X?",
+          "scene": "You measure reaction velocity at rising substrate concentration, with and without compound X. With X present, the curve still climbs to the same plateau (Vmax), but you need much more substrate to reach half of it.",
+          "choices": [
+            "Competitive: it fights the substrate for the active site, so extra substrate outcompetes it",
+            "Noncompetitive: it binds elsewhere and lowers Vmax",
+            "Uncompetitive: it binds only the enzyme-substrate complex and lowers both Vmax and Km",
+            "Irreversible: it destroys some enzyme molecules"
+          ],
+          "answer": 0,
+          "why": "Same Vmax with a higher apparent Km is the competitive signature. Flood the enzyme with substrate and the inhibitor loses. Noncompetitive and irreversible inhibitors drop Vmax, and no amount of substrate fixes that.",
+          "seconds": 40
+        },
+        {
+          "q": "What is the Q₁₀ of this enzyme?",
+          "scene": "An enzyme makes 4 μmol of product per minute at 20°C and 10 μmol per minute at 30°C. Both temperatures are well below the point where the enzyme denatures.",
+          "choices": ["0.4", "2.5", "6.0", "14"],
+          "answer": 1,
+          "why": "Q₁₀ = rate at (T + 10) ÷ rate at T = 10 ÷ 4 = 2.5. The 0.4 is the ratio flipped upside down, 6 is the difference, and 14 is the sum.",
+          "seconds": 40
+        },
+        {
+          "q": "What is the water potential of the cell, and which way does water move?",
+          "scene": "A flaccid plant cell (pressure potential = 0) holds 0.3 M sucrose (i = 1). It sits in an open beaker of pure water at 25°C (298 K). Use Ψs = −iCRT, with R = 0.0831 L·bar/mol·K.",
+          "choices": [
+            "−7.4 bar; water leaves the cell",
+            "+7.4 bar; water leaves the cell",
+            "−7.4 bar; water enters the cell",
+            "−24.8 bar; water enters the cell"
+          ],
+          "answer": 2,
+          "why": "Ψs = −(1)(0.3)(0.0831)(298) ≈ −7.4 bar, and Ψp = 0, so Ψcell = −7.4. Pure water in an open beaker is 0. Water moves toward the lower (more negative) potential, so it enters. The −24.8 forgot to multiply by 0.3.",
+          "seconds": 60
+        },
+        {
+          "q": "Respiring mitochondria are given DNP, which lets H⁺ leak back across the inner membrane. What happens?",
+          "choices": [
+            "O₂ use drops because the electron transport chain shuts down",
+            "ATP production rises because protons move faster",
+            "O₂ use and ATP production are both unchanged, since the ETC and ATP synthase are independent",
+            "O₂ use rises, ATP production falls, and more energy is released as heat"
+          ],
+          "answer": 3,
+          "why": "With no gradient to build up, nothing pushes back on the ETC, so it runs flat out and burns O₂. ATP synthase is starved of its proton flow, so ATP falls and the energy leaves as heat. The trap is thinking the ETC and ATP synthase are independent: they are coupled through the gradient.",
+          "seconds": 45
+        },
+        {
+          "q": "Why is ATP made with no light?",
+          "scene": "Isolated thylakoids are soaked in pH 4 buffer in the dark until their interior is also pH 4. They are then moved to pH 8 buffer containing ADP and phosphate. ATP appears, with no light and no electron transport.",
+          "choices": [
+            "The H⁺ gradient (high inside the thylakoid, low outside) alone drives ATP synthase",
+            "Leftover NADPH from the Calvin cycle donates its energy to ADP",
+            "Rubisco fixes CO₂ in the dark and generates the ATP",
+            "The acidic buffer directly breaks bonds in ADP"
+          ],
+          "answer": 0,
+          "why": "This is the Jagendorf experiment. Protons flowing out through ATP synthase make ATP whatever created the gradient. In the real chloroplast, light's only job is to build it.",
+          "seconds": 50
+        },
+        {
+          "q": "Why does the citric acid cycle stall?",
+          "scene": "Cyanide blocks cytochrome c oxidase, the last complex of the ETC. Cells given glucose lose nearly all aerobic ATP production, and the citric acid cycle stops too, even though no enzyme of the cycle uses O₂ directly.",
+          "choices": [
+            "Krebs enzymes need O₂ as a cofactor",
+            "NADH cannot be reoxidized, so NAD⁺ runs out for the cycle's dehydrogenases",
+            "Cyanide binds all the enzymes of the cycle directly",
+            "ATP piles up and inhibits every enzyme in the cycle"
+          ],
+          "answer": 1,
+          "why": "The ETC is how NADH goes back to NAD⁺. Block it and the cycle's dehydrogenases run out of their oxidizing agent. O₂ is only the final electron acceptor, and the cycle never touches it.",
+          "seconds": 50
+        },
+        {
+          "q": "What happens to the concentrations of 3-PGA and RuBP over the next minute?",
+          "scene": "Illuminated chloroplasts are fixing CO₂ at steady state. The light is suddenly switched off, but CO₂ is still available.",
+          "choices": [
+            "Both drop because the whole cycle stops instantly",
+            "3-PGA falls and RuBP rises, because reduction has stopped",
+            "3-PGA rises and RuBP falls",
+            "Both rise because Rubisco speeds up in the dark"
+          ],
+          "answer": 2,
+          "why": "Rubisco keeps turning RuBP into 3-PGA. But without ATP and NADPH from the light reactions, 3-PGA cannot be reduced to G3P and RuBP cannot be regenerated. So 3-PGA piles up and RuBP drains away.",
+          "seconds": 50
+        },
+        {
+          "q": "What substrate concentration is needed, with the inhibitor present, to reach 75 μmol/min?",
+          "scene": "An enzyme has Vmax = 100 μmol/min and Km = 2 mM. A competitive inhibitor raises the apparent Km to 6 mM without changing Vmax. Without the inhibitor, the enzyme reaches 75 μmol/min at 6 mM substrate.",
+          "choices": [
+            "6 mM, because a competitive inhibitor does not change the rate at that substrate level",
+            "12 mM",
+            "24 mM",
+            "18 mM"
+          ],
+          "answer": 3,
+          "why": "Use v = Vmax[S] ÷ (Km + [S]). 75 = 100[S] ÷ (6 + [S]) gives 0.75(6 + [S]) = [S], so 4.5 = 0.25[S] and [S] = 18 mM. The apparent Km tripled, so the substrate needed to hit the same rate triples too. Competitive inhibition is beaten by more substrate, but it costs you a lot of it.",
+          "seconds": 75,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "title": "Round 2: Genes and their control",
+      "intro": "Replication, operons, splicing and gene editing. Think about what the machinery actually does to the DNA or RNA.",
+      "questions": [
+        {
+          "q": "After exactly two rounds of replication in ¹⁴N, which DNA bands appear?",
+          "scene": "E. coli grown for many generations in ¹⁵N (heavy) are moved to ¹⁴N medium. DNA is sampled after exactly two rounds of replication and spun in a CsCl gradient.",
+          "choices": [
+            "All hybrid (¹⁵N/¹⁴N)",
+            "Half heavy, half hybrid",
+            "Half hybrid, half light (¹⁴N/¹⁴N)",
+            "One-quarter hybrid, three-quarters light"
+          ],
+          "answer": 2,
+          "why": "Replication is semiconservative. After round 1 every molecule is hybrid. In round 2 each hybrid gives one hybrid and one light molecule, so 2 of 4 are hybrid and 2 of 4 are light. The 1/4 and 3/4 pattern is what you get after the third round.",
+          "seconds": 50
+        },
+        {
+          "q": "Is functional β-galactosidase made?",
+          "scene": "A partial diploid E. coli carries lacI⁺ lacO^c lacZ⁻ on its chromosome and lacI⁺ lacO⁺ lacZ⁺ on an F′ plasmid. (O^c is an operator the repressor cannot bind.) No lactose is present.",
+          "choices": [
+            "Yes, constitutively, because O^c is dominant",
+            "Yes, a low level, because the two operons compete for repressor",
+            "Yes, because the broken lacZ⁻ lets the working copy escape repression",
+            "No. O^c acts only on genes on its own DNA, and that copy of lacZ is broken, while the lacZ⁺ copy keeps a normal operator and stays repressed"
+          ],
+          "answer": 3,
+          "why": "An operator is a DNA sequence, so O^c is cis-acting: it only affects genes on the same DNA molecule. Its lacZ is a dud, and the F′ lacZ⁺ is still held shut by the repressor. The trap is the word constitutive.",
+          "seconds": 60
+        },
+        {
+          "q": "What is the most likely explanation?",
+          "scene": "A three-exon gene normally gives a 900-nt mature mRNA, and exon 2 is 150 nt long. A patient has a single-base change in the GU at the 5′ end of intron 1. His cells make a 750-nt mRNA.",
+          "choices": [
+            "The splice donor site was destroyed, so exon 2 was skipped",
+            "The mutation deleted 150 bp of DNA from the gene",
+            "Intron 1 was not removed",
+            "The poly-A tail was clipped short"
+          ],
+          "answer": 0,
+          "why": "A single-base change cannot delete 150 bases of DNA. It wrecks a splice signal, and the spliceosome joins exon 1 straight to exon 3. Intron retention would make the mRNA longer, not shorter.",
+          "seconds": 50
+        },
+        {
+          "q": "What does the gel show for the mutant plasmid?",
+          "scene": "A 6,000 bp circular plasmid has EcoRI sites at positions 1,000 and 3,500, and digestion gives bands at 2,500 and 3,500 bp. A mutant plasmid has a single base changed that destroys the site at 3,500. It is digested the same way.",
+          "choices": [
+            "Bands at 2,500 and 3,500 bp, as before",
+            "One band at 6,000 bp",
+            "Bands at 1,000 and 5,000 bp",
+            "No bands, because EcoRI no longer works"
+          ],
+          "answer": 1,
+          "why": "A circle cut at two sites gives two fragments (2,500 and 3,500). With only one site left, one cut just opens the circle into a single 6,000 bp linear piece. The 1,000 and 5,000 answer treats the site positions as fragment sizes.",
+          "seconds": 60
+        },
+        {
+          "q": "Which clone is most likely to still make a nearly full-length protein?",
+          "scene": "Cas9 cuts inside exon 1 of gene G and the cell repairs it by error-prone NHEJ. Four clones are sequenced. Clone 1 has a 1-bp insertion, clone 2 a 4-bp deletion, clone 3 a 3-bp deletion, clone 4 a 2-bp insertion. All are in the coding sequence, away from splice sites.",
+          "choices": [
+            "Clone 1 (+1 bp)",
+            "Clone 2 (−4 bp)",
+            "Clone 3 (−3 bp)",
+            "Clone 4 (+2 bp)"
+          ],
+          "answer": 2,
+          "why": "Indels that are not multiples of 3 shift the reading frame, which scrambles the codons downstream and usually hits a premature stop. A 3-bp deletion removes just one codon and keeps the frame, so the rest of the protein is still read correctly.",
+          "seconds": 45
+        },
+        {
+          "q": "What is the best explanation?",
+          "scene": "Cells are treated with a drug that inhibits histone deacetylases (HDACs). Genes that were silent in a region of heterochromatin switch on.",
+          "choices": [
+            "The drug mutates the promoters so RNA polymerase binds better",
+            "Without deacetylation, histones fall off and the genes are deleted",
+            "HDACs normally methylate cytosines, so blocking them removes the methyl groups",
+            "Acetyl groups stay on the histone tails, neutralizing their positive charge and loosening DNA-histone contacts so transcription machinery can get in"
+          ],
+          "answer": 3,
+          "why": "Lysine tails are positive and grip the negative DNA. Acetylation removes that charge, relaxing chromatin. HDACs take acetyl groups off, so blocking HDACs keeps chromatin open. HDACs work on histones, not on DNA methylation.",
+          "seconds": 50
+        },
+        {
+          "q": "Where does the protein end up?",
+          "scene": "A normally secreted enzyme is expressed from a gene whose N-terminal signal sequence has been deleted. Everything else is intact.",
+          "choices": [
+            "In the cytosol, made on free ribosomes that never dock at the ER",
+            "It is secreted normally, because the rest of the protein carries enough targeting information",
+            "Stuck in the ER lumen",
+            "Inside the nucleus"
+          ],
+          "answer": 0,
+          "why": "The signal peptide is what the signal recognition particle grabs to bring the ribosome to the rough ER. Without it, translation finishes in the cytosol and the protein stays there.",
+          "seconds": 40
+        },
+        {
+          "q": "Is β-galactosidase made?",
+          "scene": "A partial diploid E. coli carries lacI^s lacO⁺ lacZ⁻ on its chromosome and lacI⁺ lacO⁺ lacZ⁺ on an F′ plasmid. (lacI^s encodes a repressor that binds the operator normally but can no longer bind allolactose.) Lactose is present and glucose is absent.",
+          "choices": [
+            "Yes. Allolactose inactivates the normal repressor, which is enough to turn on the F′ operon",
+            "No. The lacI^s repressor is dominant in trans, stays on both operators, and cannot be released",
+            "Yes, but at half the usual level, since half the repressor is normal",
+            "No. The lacZ⁻ on the chromosome blocks the F′ operon"
+          ],
+          "answer": 1,
+          "why": "The repressor is a diffusible protein, so it acts in trans. The lacI^s protein sits on both operators and ignores allolactose, so the wild-type repressor cannot rescue the F′ operon. The chromosomal lacZ⁻ has no effect on the F′ copy.",
+          "seconds": 70,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "title": "Round 3: Inheritance and evolution",
+      "intro": "Ratios, maps and trees. Do the math before you trust your gut.",
+      "questions": [
+        {
+          "q": "What is the correct conclusion?",
+          "scene": "A dihybrid cross is expected to give 9:3:3:1 among 160 offspring. Observed counts are 110, 20, 20 and 10. The critical value for df = 3 at p = 0.05 is 7.81.",
+          "choices": [
+            "χ² ≈ 11.1, which is above 7.81: reject the null, the data differ from 9:3:3:1 by more than chance explains",
+            "χ² ≈ 11.1, which is above 7.81: fail to reject, since a larger χ² means a better fit",
+            "χ² ≈ 3.7, which is below 7.81: fail to reject",
+            "χ² ≈ 11.1, which is above 7.81: the genes are proven to be linked"
+          ],
+          "answer": 0,
+          "why": "Expected counts are 90, 30, 30 and 10. χ² = 400/90 + 100/30 + 100/30 + 0 ≈ 11.1, which is above 7.81, so reject. Rejecting does not tell you why, and linkage is only one possible cause. A bigger χ² means a worse fit.",
+          "seconds": 70
+        },
+        {
+          "q": "What is the map distance between A and B?",
+          "scene": "A test cross AaBb × aabb gives 440 AB, 440 ab, 60 Ab and 60 aB offspring.",
+          "choices": ["6 map units", "12 map units", "44 map units", "88 map units"],
+          "answer": 1,
+          "why": "The parental types are the two big classes (AB and ab). Recombinants are Ab and aB: 120 of 1,000 = 12%, or 12 map units. 88 is the parental percentage, and 6 counts only one recombinant class.",
+          "seconds": 45
+        },
+        {
+          "q": "What is the probability their first child is affected?",
+          "scene": "Two unaffected parents have an affected daughter and an unaffected son. The son, who has no other family history, marries a woman who has the same rare condition.",
+          "choices": ["1/2", "1/4", "1/3", "2/3"],
+          "answer": 2,
+          "why": "Unaffected parents with an affected daughter means autosomal recessive (an X-linked recessive daughter would need an affected father). Parents are Aa × Aa. The son is unaffected, so he is Aa with probability 2/3. Aa × aa gives 1/2 affected, so 2/3 × 1/2 = 1/3. The trap is forgetting to exclude the aa box.",
+          "seconds": 60
+        },
+        {
+          "q": "About what fraction of the population are carriers?",
+          "scene": "A recessive disorder affects 1 in 2,500 newborns. Assume Hardy-Weinberg equilibrium.",
+          "choices": ["0.04%", "2.0%", "0.2%", "About 3.9%"],
+          "answer": 3,
+          "why": "q² = 1/2,500 = 0.0004, so q = 0.02 and p = 0.98. Carriers are 2pq = 2(0.98)(0.02) ≈ 0.039. The 2% is q, the allele frequency, not the carrier frequency. The 0.04% is just q², the affected fraction.",
+          "seconds": 55
+        },
+        {
+          "q": "What best explains the shortage of heterozygotes?",
+          "scene": "In 500 newly hatched beetles, before any selection, the genotype counts are AA = 200, Aa = 200 and aa = 100, so p = 0.6 and q = 0.4. Hardy-Weinberg predicts AA = 180, Aa = 240 and aa = 80.",
+          "choices": [
+            "Nonrandom mating, such as inbreeding or self-fertilization",
+            "Genetic drift acting in this single generation",
+            "A high mutation rate from A to a",
+            "Gene flow from a population with the same allele frequencies"
+          ],
+          "answer": 0,
+          "why": "Both homozygote classes are in excess and heterozygotes are short, which is the mark of inbreeding. Drift, mutation and gene flow change allele frequencies, but one round of random mating would still restore Hardy-Weinberg proportions. Gene flow from a population with identical frequencies changes nothing.",
+          "seconds": 60
+        },
+        {
+          "q": "Which tree is the most parsimonious?",
+          "scene": "Four taxa and three derived traits (1 = present). W has traits 1, 2 and 3. X has traits 1 and 2. Y has trait 1. Z has none and is the outgroup. Assume each trait evolved once and none was lost. Trees are written as nested pairs.",
+          "choices": [
+            "(Z,(W,(X,Y)))",
+            "(Z,(Y,(X,W)))",
+            "(W,(X,(Y,Z)))",
+            "((W,Z),(X,Y))"
+          ],
+          "answer": 1,
+          "why": "Nested groups are defined by shared derived traits. Trait 1 unites W, X and Y; trait 2 unites W and X; trait 3 marks W alone. Every other tree forces a trait to arise twice or be lost.",
+          "seconds": 60
+        },
+        {
+          "q": "Why does chromosome doubling restore fertility in the hybrid?",
+          "scene": "Two plant species have 2n = 14 and 2n = 22. They hybridize and the hybrid is sterile. A rare offspring has had its chromosome number doubled, and it is fertile.",
+          "choices": [
+            "Doubling creates new alleles that make gametes viable",
+            "Doubling masks deleterious recessive alleles",
+            "Each chromosome now has an identical partner to pair with in meiosis",
+            "Doubling lets the plant mate again with both parent species"
+          ],
+          "answer": 2,
+          "why": "The hybrid gets 7 + 11 = 18 chromosomes with no homologous pairs, so meiosis fails. Doubling gives 36 chromosomes in 18 matching pairs. The new tetraploid is also reproductively isolated from both parents, whose crosses with it give sterile offspring.",
+          "seconds": 55
+        },
+        {
+          "q": "What is the interference?",
+          "scene": "Genes are mapped in the order B–A–C. B–A is 8 map units and A–C is 14 map units. In 2,500 offspring of a three-point testcross, 7 are double crossovers.",
+          "choices": ["0.25", "4.0", "0.28", "0.75"],
+          "answer": 3,
+          "why": "Expected double crossovers = 0.08 × 0.14 × 2,500 = 28. Coincidence = 7/28 = 0.25. Interference = 1 − coincidence = 0.75. The 0.25 is the coincidence, and 4.0 is the ratio flipped.",
+          "seconds": 75,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r4",
+      "title": "Round 4: Systems and ecology",
+      "intro": "Signals, feedback, defenses and populations. Trace the pathway before you pick.",
+      "questions": [
+        {
+          "q": "Compared with untreated cells, what does a pulse of epinephrine now cause?",
+          "scene": "Epinephrine binds a GPCR on a liver cell, activating adenylyl cyclase to make cAMP, which activates PKA. Phosphodiesterase (PDE) normally converts cAMP to AMP. A drug blocks PDE.",
+          "choices": [
+            "A longer, stronger cAMP signal and prolonged PKA activity",
+            "No cAMP at all",
+            "The same duration of signal, but with faster G protein turnover",
+            "No response, because the receptor is blocked"
+          ],
+          "answer": 0,
+          "why": "Every signal needs an off switch. PDE destroys cAMP, so blocking it lets cAMP linger and the response last longer. The receptor and adenylyl cyclase are untouched.",
+          "seconds": 45
+        },
+        {
+          "q": "Where is the likely problem?",
+          "scene": "A patient has high blood thyroxine (T4) and very low TSH. The normal pathway is hypothalamus → TRH → pituitary → TSH → thyroid → T4, and T4 inhibits the hypothalamus and pituitary.",
+          "choices": [
+            "A TSH-secreting pituitary tumor",
+            "The thyroid makes T4 on its own, independent of TSH, and negative feedback has shut down TSH",
+            "The hypothalamus overproduces TRH",
+            "The pituitary T4 receptors are broken"
+          ],
+          "answer": 1,
+          "why": "Excess T4 from an autonomous thyroid suppresses TSH through normal negative feedback. A pituitary tumor, excess TRH or broken T4 receptors in the pituitary would all produce high or normal TSH.",
+          "seconds": 55
+        },
+        {
+          "q": "Which defense is most directly crippled?",
+          "scene": "A virus infects cells and its proteins are chopped up by the proteasome. A genetic defect in the TAP transporter keeps these peptides out of the ER, so MHC I complexes are never loaded.",
+          "choices": [
+            "Helper T cells cannot be activated by dendritic cells",
+            "B cells cannot secrete any antibody",
+            "Cytotoxic T cells cannot recognize and kill the infected cells",
+            "Macrophages can no longer phagocytose"
+          ],
+          "answer": 2,
+          "why": "CD8⁺ cytotoxic T cells read peptides displayed on MHC I, and with TAP broken there is nothing to read. Antigen-presenting cells show peptides on MHC II via a different route, so helper T and antibody responses mostly still work.",
+          "seconds": 55
+        },
+        {
+          "q": "What do you record?",
+          "scene": "A neuron is bathed in tetrodotoxin (TTX), which blocks voltage-gated Na⁺ channels. A current electrode depolarizes the axon hillock from −70 mV to −50 mV.",
+          "choices": [
+            "A normal action potential, since K⁺ channels do the repolarizing",
+            "An action potential that rises higher, because K⁺ efflux is unopposed",
+            "The resting potential collapses to 0 mV",
+            "Only a small graded depolarization with no action potential, and the resting potential stays near −70 mV"
+          ],
+          "answer": 3,
+          "why": "The resting potential is set mainly by K⁺ leak channels and the Na⁺/K⁺ pump, so TTX does not change it. The upstroke of an action potential needs voltage-gated Na⁺ entry, so you only see the passive depolarization from the electrode.",
+          "seconds": 50
+        },
+        {
+          "q": "What is dN/dt at N = 200?",
+          "scene": "A population has r = 0.5 per year and carrying capacity K = 1,000. Use dN/dt = rN(1 − N/K).",
+          "choices": ["80", "100", "20", "400"],
+          "answer": 0,
+          "why": "dN/dt = 0.5 × 200 × (1 − 200/1000) = 100 × 0.8 = 80 individuals per year. The 100 is the exponential answer that ignores the carrying capacity. The 20 multiplies by N/K instead of 1 − N/K.",
+          "seconds": 45
+        },
+        {
+          "q": "How much energy reaches the snake?",
+          "scene": "A grassland's producers fix 20,000 kJ/m²/yr of net primary production. Assume 10% transfer between trophic levels. The food chain is grass → grasshopper → frog → snake → hawk.",
+          "choices": ["2 kJ", "20 kJ", "200 kJ", "2,000 kJ"],
+          "answer": 1,
+          "why": "The snake is the fourth trophic level, so there are three transfers: 20,000 × 0.1³ = 20 kJ. The hawk would get 2. The usual slip is miscounting which level the animal sits on.",
+          "seconds": 45
+        },
+        {
+          "q": "What does this experiment show about the sea star?",
+          "scene": "Researchers remove a sea star that makes up only 2% of the biomass of a rocky shore community. Within two years mussels cover the rock and species richness drops from 15 to 8.",
+          "choices": [
+            "It is a dominant species because of its abundance",
+            "It is a foundation species that builds the habitat",
+            "It is a keystone predator: its effect on the community is far larger than its biomass",
+            "It is a mutualist with the mussels"
+          ],
+          "answer": 2,
+          "why": "At 2% of biomass it cannot be dominant. The sea star eats the mussels that would otherwise monopolize space. That is a keystone species: huge effect, small abundance. It builds no habitat, so it is not a foundation species.",
+          "seconds": 50
+        },
+        {
+          "q": "In what order do X, Y and Z act in the pathway?",
+          "scene": "A ligand turns on a signaling pathway containing three proteins X, Y and Z. A loss-of-function mutant in any one of them abolishes the response. Constitutively active forms (marked *) were tested in mutants: X* in a Y-deficient cell gives no response. Y* in an X-deficient cell gives a response. Y* in a Z-deficient cell gives no response. Z* in a Y-deficient cell gives a response.",
+          "choices": [
+            "Z → Y → X",
+            "Y → X → Z",
+            "X → Z → Y",
+            "X → Y → Z"
+          ],
+          "answer": 3,
+          "why": "A constitutively active protein works only if everything downstream of it is intact, and it rescues a mutant that is upstream of it. Y* rescues the X mutant, so Y is downstream of X. Z* rescues the Y mutant, so Z is downstream of Y. Y* fails without Z, which confirms Z is last.",
+          "seconds": 75,
+          "boss": true
+        }
+      ]
+    }
+  ]
+}

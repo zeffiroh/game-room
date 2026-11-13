@@ -1,0 +1,450 @@
+{
+  "id": "bioinformatics",
+  "title": "Bioinformatics",
+  "subject": "Bioinformatics",
+  "icon": "terminal",
+  "level": "Advanced high school / intro college",
+  "blurb": "Work through sequences, alignments, genomes and trees by computing, not just recalling.",
+  "rounds": [
+    {
+      "id": "r1",
+      "title": "Round 1: Sequences",
+      "intro": "Short sequences, reading frames and quality scores. Compute carefully; the traps are all realistic.",
+      "questions": [
+        {
+          "q": "What is the reverse complement of this sequence?",
+          "scene": "5'-ATGCCGTAGCTA-3'",
+          "choices": [
+            "TACGGCATCGAT",
+            "ATCGATGCCGTA",
+            "TAGCTACGGCAT",
+            "TACGTAGCCGAT"
+          ],
+          "answer": 2,
+          "why": "Complement every base, then read the result backward so it runs 5' to 3'. Complement only or reverse only are the classic traps.",
+          "seconds": 40
+        },
+        {
+          "q": "Translate from the first AUG until the first stop codon. Which peptide do you get?",
+          "scene": "5'-GCAUGAAAUGGUAAC-3'",
+          "choices": [
+            "Met-Lys-Trp",
+            "Met-Val",
+            "Ala",
+            "Met-Lys-Trp-Tyr"
+          ],
+          "answer": 0,
+          "why": "The first AUG sits at nucleotides 3-5, giving AUG AAA UGG then UAA, a stop. Starting at the second AUG is off-frame, and UAA is never Tyr.",
+          "seconds": 50
+        },
+        {
+          "q": "This quality string is Phred+33. The third character is 5, ASCII code 53. What is the error probability of that base?",
+          "scene": "FASTQ quality line: I?5+",
+          "choices": [
+            "0.1%",
+            "10%",
+            "5%",
+            "1%"
+          ],
+          "answer": 3,
+          "why": "Q = 53 - 33 = 20, and error = 10^(-Q/10) = 0.01. Do not read the character 5 as 5%.",
+          "seconds": 50
+        },
+        {
+          "q": "What is the GC content of this sequence?",
+          "scene": "5'-ATGCGCGTAATGCGCC-3'",
+          "choices": [
+            "37.5%",
+            "62.5%",
+            "50%",
+            "10%"
+          ],
+          "answer": 1,
+          "why": "Count G and C: 10 of 16 bases, so 10/16 = 62.5%. 37.5% is the AT fraction, the opposite answer.",
+          "seconds": 40
+        },
+        {
+          "q": "A FASTQ file has 2,000,000 lines. How many reads does it hold?",
+          "choices": [
+            "500,000",
+            "1,000,000",
+            "2,000,000",
+            "666,667"
+          ],
+          "answer": 0,
+          "why": "Each FASTQ record takes 4 lines: header, sequence, plus line, quality. 2,000,000 / 4 = 500,000. Two lines per record is FASTA-style thinking.",
+          "seconds": 30
+        },
+        {
+          "q": "A 301-nt sequence is read in frame 3, starting at nucleotide 3. How many complete codons does that frame contain?",
+          "choices": [
+            "100",
+            "101",
+            "99",
+            "98"
+          ],
+          "answer": 2,
+          "why": "Nucleotides 3 to 301 are 299 bases; 299 / 3 = 99 codons with 2 bases left over. Frame 1 and frame 2 each give 100.",
+          "seconds": 45
+        },
+        {
+          "q": "Which description fits the mutation and its effect on the protein?",
+          "scene": "Wild type: ATG GAA ACC TGG TAA\nMutant:    ATG GAA ACC TAG TAA",
+          "choices": [
+            "Silent: the protein is unchanged",
+            "Nonsense: a premature stop leaves only Met-Glu-Thr",
+            "Missense: Trp is replaced by another amino acid",
+            "Frameshift: every codon after codon 4 changes"
+          ],
+          "answer": 1,
+          "why": "TGG to TAG is one substitution that turns Trp into a stop, so the protein ends after 3 residues. A frameshift needs an insertion or deletion, not a substitution.",
+          "seconds": 50
+        },
+        {
+          "q": "The gene is encoded on the bottom strand. What protein does it make (start at ATG, stop at the first stop)?",
+          "scene": "Top strand: 5'-GCTTACCAAGCCATGC-3'",
+          "choices": [
+            "Ala-Tyr-Gln-Ala-Met",
+            "Met-Val-Arg-Tyr",
+            "Ala-Trp-Leu-Gly-Lys",
+            "Met-Ala-Trp"
+          ],
+          "answer": 3,
+          "why": "The bottom strand read 5' to 3' is the reverse complement, GCATGGCTTGGTAAGC, giving ATG GCT TGG TAA. Translating the top strand, the plain complement, or frame 1 of the reverse complement without an ATG gives the other options.",
+          "seconds": 90,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "title": "Round 2: Alignment and search",
+      "intro": "Score alignments by hand and read search output the way a scientist would.",
+      "questions": [
+        {
+          "q": "Two proteins share one conserved 40-residue domain; the rest of each is unrelated. Which method is built to find that shared region?",
+          "choices": [
+            "Needleman-Wunsch (global alignment)",
+            "Smith-Waterman (local alignment)",
+            "UPGMA clustering",
+            "Needleman-Wunsch with a bigger gap penalty"
+          ],
+          "answer": 1,
+          "why": "Local alignment scores just the best matching segment. Global alignment forces the unrelated ends to line up and drags the score down.",
+          "seconds": 35
+        },
+        {
+          "q": "What is the total alignment score?",
+          "scene": "Scores: match +2, mismatch -1, gap -2 per gap position\nSeq1: A C G T A C G T\nSeq2: A C C T A - G T",
+          "choices": [
+            "10",
+            "12",
+            "8",
+            "9"
+          ],
+          "answer": 3,
+          "why": "Six matches give +12, one mismatch (G/C) is -1, and one gap is -2: 12 - 1 - 2 = 9. Forgetting the mismatch gives 10.",
+          "seconds": 60
+        },
+        {
+          "q": "How do you read this BLAST hit?",
+          "scene": "Query vs subject: bit score 61, E = 3e-5",
+          "choices": [
+            "About 3 hits this good would be expected by chance in 100,000 searches of a database this size",
+            "The two sequences are homologous with probability 3e-5",
+            "The hit is 99.997% likely to be homologous",
+            "The alignment is 0.003% identical"
+          ],
+          "answer": 0,
+          "why": "The E-value is the expected number of chance hits with this score or better. It is not the probability that the sequences are homologous.",
+          "seconds": 50
+        },
+        {
+          "q": "The same hit, with the same bit score, is searched against a database 10 times larger. What E-value do you expect?",
+          "scene": "Hit in a database of 1 million sequences: E = 2e-10",
+          "choices": [
+            "2e-11",
+            "2e-10 (unchanged)",
+            "2e-9",
+            "2e-20"
+          ],
+          "answer": 2,
+          "why": "E scales linearly with search space, so 10x the database gives 10x the E-value. A bigger database means more chances for a chance hit.",
+          "seconds": 50
+        },
+        {
+          "q": "You are hunting for very distant homologs. Which substitution matrix is the best fit?",
+          "choices": [
+            "BLOSUM80",
+            "PAM1",
+            "An identity matrix (+1 match, 0 otherwise)",
+            "BLOSUM45"
+          ],
+          "answer": 3,
+          "why": "Low-numbered BLOSUM matrices are built from more divergent blocks and reward conservative substitutions. BLOSUM80 and PAM1 suit close relatives.",
+          "seconds": 45
+        },
+        {
+          "q": "Which statement is correct?",
+          "scene": "Genes X and Y: 38% identity over 300 residues, E = 1e-60",
+          "choices": [
+            "X and Y are 38% homologous",
+            "X and Y are homologous, and they are 38% identical",
+            "X and Y are not homologous because identity is under 50%",
+            "X and Y are homologous only if their identity is 100%"
+          ],
+          "answer": 1,
+          "why": "Homology is yes or no: shared ancestry, inferred from evidence like this E-value. Identity and similarity are measured percentages.",
+          "seconds": 50
+        },
+        {
+          "q": "An alignment contains one gap of length 4. What is its penalty?",
+          "scene": "Affine gap scheme: first gap position costs -10, each additional position costs -1",
+          "choices": [
+            "-40",
+            "-14",
+            "-13",
+            "-4"
+          ],
+          "answer": 2,
+          "why": "Open costs -10 for position 1, then -1 for each of the 3 extra positions: -10 - 3 = -13. Charging -10 for every position treats it as a linear gap.",
+          "seconds": 50
+        },
+        {
+          "q": "Using match +2, mismatch -1, gap -2 (end gaps are penalized), what are the best local and global scores?",
+          "scene": "Seq1: TTACGTT\nSeq2: ACGT",
+          "choices": [
+            "Local 8, global 2",
+            "Local 2, global 8",
+            "Local 8, global 8",
+            "Local 8, global -2"
+          ],
+          "answer": 0,
+          "why": "Local aligns ACGT to ACGT for 4 x 2 = 8. Global must also pair TT and TT with 3 gap positions total, costing -6, so 8 - 6 = 2.",
+          "seconds": 90,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "title": "Round 3: Genomes and expression",
+      "intro": "Coverage math, assembly, variants and RNA-seq statistics.",
+      "questions": [
+        {
+          "q": "How many 150-bp reads give 30x coverage of a 3 Gb genome?",
+          "choices": [
+            "600 million",
+            "300 million",
+            "60 million",
+            "6 billion"
+          ],
+          "answer": 0,
+          "why": "Coverage = reads x length / genome size, so reads = 30 x 3,000,000,000 / 150 = 600,000,000. 300 million uses the pair length by mistake.",
+          "seconds": 50
+        },
+        {
+          "q": "What is the average coverage?",
+          "scene": "Bacterial genome: 5 Mb\nSequencing: 1,000,000 read pairs, 2 x 150 bp",
+          "choices": [
+            "30x",
+            "60x",
+            "120x",
+            "6x"
+          ],
+          "answer": 1,
+          "why": "Each pair gives 300 bases of data: 1,000,000 x 300 / 5,000,000 = 60x. Counting one read per pair gives 30x.",
+          "seconds": 50
+        },
+        {
+          "q": "How many 21-mers are in a 50-base read?",
+          "choices": [
+            "29",
+            "50",
+            "30",
+            "21"
+          ],
+          "answer": 2,
+          "why": "A read of length L holds L - k + 1 k-mers: 50 - 21 + 1 = 30. Forgetting the +1 gives 29.",
+          "seconds": 35
+        },
+        {
+          "q": "Assembly breaks into fragments at a 5 kb repeat. Why?",
+          "scene": "Reads: 150 bp. Repeat: 5,000 bp, two copies in the genome.",
+          "choices": [
+            "Repeats are always GC-poor, so they get low coverage",
+            "The Phred scores in repeats are always below Q10",
+            "The coverage was too high, so the k-mers collapsed",
+            "Reads shorter than the repeat cannot span it, so the repeat copies cannot be placed uniquely"
+          ],
+          "answer": 3,
+          "why": "A read must reach unique sequence on both sides of a repeat to anchor it. Long reads or paired-end data with long inserts can bridge repeats.",
+          "seconds": 50
+        },
+        {
+          "q": "What is the most likely genotype at this site?",
+          "scene": "chr2  1045  A  G\nDP=40  AD=21,19\nSequencing error rate about 1%",
+          "choices": [
+            "0/1 (heterozygous)",
+            "0/0 (homozygous reference)",
+            "1/1 (homozygous alternate)",
+            "No call: the site is contaminated"
+          ],
+          "answer": 0,
+          "why": "A roughly 50:50 split of ref and alt reads at good depth is the heterozygous signature. A 1% error rate cannot explain 19 alt reads out of 40.",
+          "seconds": 45
+        },
+        {
+          "q": "What is the log2 fold change (treated vs control)?",
+          "scene": "Gene X normalized counts: control 50, treated 400",
+          "choices": [
+            "8",
+            "3",
+            "-3",
+            "0.9"
+          ],
+          "answer": 1,
+          "why": "Fold change is 400 / 50 = 8, and log2(8) = 3. The fold change itself is 8; log10(8) is about 0.9.",
+          "seconds": 40
+        },
+        {
+          "q": "How do you read this gene's position?",
+          "scene": "Volcano plot: x = log2 fold change (treated vs control), y = -log10 adjusted p-value. One gene sits at x = -2, y = 3.",
+          "choices": [
+            "Up 4-fold in treated, adjusted p = 0.001",
+            "Down 2-fold in treated, adjusted p = 0.001",
+            "Down 4-fold in treated, adjusted p = 0.03",
+            "Down 4-fold in treated, adjusted p = 0.001"
+          ],
+          "answer": 3,
+          "why": "log2FC = -2 means 2^-2 = 1/4, so down 4-fold. y = -log10(adj p) = 3 means adj p = 10^-3.",
+          "seconds": 60
+        },
+        {
+          "q": "Using Benjamini-Hochberg at FDR 5%, how many tests are called discoveries?",
+          "scene": "Sorted p-values from 5 tests: 0.004, 0.012, 0.028, 0.041, 0.60",
+          "choices": [
+            "1",
+            "4",
+            "3",
+            "2"
+          ],
+          "answer": 2,
+          "why": "BH thresholds are (rank/5) x 0.05 = 0.01, 0.02, 0.03, 0.04, 0.05. The largest p under its threshold is rank 3 (0.028 <= 0.03), so the top 3 pass. Bonferroni (0.01) keeps 1; raw p < 0.05 keeps 4.",
+          "seconds": 90,
+          "boss": true
+        }
+      ]
+    },
+    {
+      "id": "r4",
+      "title": "Round 4: Trees, structure and databases",
+      "intro": "Read trees, judge predicted structures and know where data lives.",
+      "questions": [
+        {
+          "q": "Using UPGMA, what is the branch length from the A-B node to A?",
+          "scene": "Distances: A-B = 2, A-C = 6, B-C = 6",
+          "choices": [
+            "2",
+            "3",
+            "6",
+            "1"
+          ],
+          "answer": 3,
+          "why": "UPGMA places the node at half the distance: 2 / 2 = 1, and each branch to its tip has length 1. Using the full distance 2 is the trap.",
+          "seconds": 45
+        },
+        {
+          "q": "Are these two trees the same topology?",
+          "scene": "Tree 1: ((A,B),(C,D));\nTree 2: ((D,C),(B,A));",
+          "choices": [
+            "No, D is now next to B",
+            "Yes, rotating branches at a node does not change relationships",
+            "No, the root has changed",
+            "Only if all branch lengths are equal"
+          ],
+          "answer": 1,
+          "why": "Tip order on the page means nothing; only who shares nodes matters. Both trees group A with B and C with D.",
+          "seconds": 50
+        },
+        {
+          "q": "A node has bootstrap support 45. What does that mean?",
+          "choices": [
+            "There is a 45% probability the grouping is true",
+            "45% of the genes support the grouping",
+            "The grouping reappeared in 45% of resampled datasets, so support is weak",
+            "The two groups diverged 45 million years ago"
+          ],
+          "answer": 2,
+          "why": "Bootstrap measures how often a clade is recovered when the data are resampled. It is not a probability that the clade is correct.",
+          "seconds": 45
+        },
+        {
+          "q": "Why add a distantly related outgroup (a frog) to a tree of mammals?",
+          "choices": [
+            "It roots the tree and shows the direction of evolution",
+            "It raises every bootstrap value",
+            "It corrects for GC content bias",
+            "It doubles the effective coverage"
+          ],
+          "answer": 0,
+          "why": "An outgroup branches off before all the ingroup does, so it marks where the root goes. Without it the tree is unrooted.",
+          "seconds": 40
+        },
+        {
+          "q": "How do you read this AlphaFold result?",
+          "scene": "Residues 1-30: pLDDT about 35\nResidues 31-250: pLDDT about 94",
+          "choices": [
+            "Residues 31-250 are experimentally validated; 1-30 are known to be unfolded",
+            "Residues 31-250 are confidently modeled; residues 1-30 are low confidence and probably disordered",
+            "pLDDT is the percent identity to the nearest PDB entry",
+            "Residues 1-30 are the most reliable part of the model"
+          ],
+          "answer": 1,
+          "why": "pLDDT is the per-residue confidence of the prediction, with above 90 very high and below 50 low. Low scores often mean flexible or disordered regions, and it is a prediction, not an experiment.",
+          "seconds": 50
+        },
+        {
+          "q": "Match the tasks in order to the databases.",
+          "scene": "(i) Download a submitted DNA sequence record by accession\n(ii) Read curated protein function and domains\n(iii) Get atomic coordinates of a crystal structure",
+          "choices": [
+            "UniProt; PDB; GenBank",
+            "PDB; GenBank; UniProt",
+            "GenBank (NCBI); UniProt; PDB",
+            "Ensembl; GenBank; UniProt"
+          ],
+          "answer": 2,
+          "why": "GenBank archives submitted nucleotide records, UniProt curates protein function and domains, and the PDB stores experimental 3D coordinates.",
+          "seconds": 50
+        },
+        {
+          "q": "Which resource should you use?",
+          "scene": "You need the exon coordinates of a human gene's canonical transcript in GRCh38, plus its mouse ortholog.",
+          "choices": [
+            "Ensembl",
+            "PDB",
+            "UniProt",
+            "GenBank"
+          ],
+          "answer": 0,
+          "why": "Ensembl provides genome annotation: gene models, transcripts, coordinates and orthologs for vertebrate genomes. PDB holds structures, UniProt protein annotation.",
+          "seconds": 40
+        },
+        {
+          "q": "In the UPGMA tree, what is the branch length from the root to the (C,D) node?",
+          "scene": "Distances: A-B = 4, C-D = 8; every A or B to C or D distance = 12",
+          "choices": [
+            "6",
+            "4",
+            "8",
+            "2"
+          ],
+          "answer": 3,
+          "why": "Heights are half the distances: (A,B) at 2, (C,D) at 4. The root is at 12 / 2 = 6, so root to (C,D) is 6 - 4 = 2. The root height 6 and root to (A,B), 4, are the traps.",
+          "seconds": 90,
+          "boss": true
+        }
+      ]
+    }
+  ]
+}

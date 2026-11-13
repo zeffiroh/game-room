@@ -1,0 +1,23 @@
+{
+  "_help": "Blank template. Copy this folder, rename it, add it to packs/index.json, then edit the title, show and content.",
+  "title": "Class Fun Day",
+  "joinLine": "Type a name. Pick a guy.",
+  "welcome": "Walk around and wait for the teacher to start.",
+  "labels": { "curator": "Your teacher", "venue": "fun day" },
+  "theme": { "colors": {} },
+  "files": { "quiz": "quiz.json", "cards": "cards.json", "movie": "movie.json" },
+  "show": [
+    { "station": "lobby", "title": "Spawn", "stamp": { "id": "arrive", "name": "Showed up", "all": true, "line": "You made it." } },
+    { "station": "quiz", "round": "main", "title": "Quiz", "intro": "Read the question. Pick the answer.", "stamp": { "id": "quiz", "name": "Quiz", "line": "Quiz done." } },
+    { "station": "ping-pong", "title": "Ping Pong", "stamp": { "id": "pingpong", "name": "Ping pong", "line": "You touched the table." } },
+    { "station": "breakroom", "title": "Break room", "minutes": 5, "stamp": { "id": "break", "name": "Break", "all": true, "line": "Snack acquired." } },
+    { "station": "movie", "title": "Movie night", "stamp": { "id": "movie", "name": "Movie", "all": true, "line": "Popcorn break." } },
+    { "station": "honors", "title": "Awards" },
+    { "station": "closing", "title": "The end" }
+  ],
+  "awards": [
+    { "title": "MVP", "metric": "score", "unit": "points", "blurb": "Most points in the room." },
+    { "title": "Hype man", "metric": "stats.reacts", "unit": "reactions", "blurb": "Never stopped tapping the buttons." }
+  ],
+  "closing": { "title": "That's the show", "message": "Thanks for coming.", "signoff": "See you in class." }
+}

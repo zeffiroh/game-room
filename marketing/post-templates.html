@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Game Room posts</title>
+<style>
+  /* Each .post is exactly 1080x1080 (or 1080x1920 for .story). Screenshot one element at a time:
+     Chrome DevTools > right-click the <section> > "Capture node screenshot". Edit the text right here. */
+  :root { --desk:#4a1d2c; --title:#7a0f1f; --face:#c0c0c0; --y:#ffd400; --r:#c0001a; --p:#7a2d86;
+    --raised: inset -3px -3px #000, inset 3px 3px #fff, inset -6px -6px #808080, inset 6px 6px #dfdfdf;
+    --sunken: inset -3px -3px #fff, inset 3px 3px #808080, inset -6px -6px #dfdfdf, inset 6px 6px #000; }
+  body { margin: 0; background: #222; font-family: Tahoma, "Segoe UI", sans-serif; display: grid; gap: 60px; justify-items: center; padding: 60px 0; }
+  .post { width: 1080px; height: 1080px; position: relative; overflow: hidden; background: var(--desk); color: #fff;
+    background-image: linear-gradient(rgba(255,255,255,.06) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,.06) 2px, transparent 2px); background-size: 64px 64px; }
+  .story { height: 1920px; }
+  .mega { font: 900 230px/.84 "Arial Black", "Helvetica Neue", Arial, sans-serif; letter-spacing: -.05em; text-transform: uppercase; margin: 0; }
+  .pad { position: absolute; inset: 80px; display: flex; flex-direction: column; }
+  .win { background: var(--face); box-shadow: var(--raised); padding: 6px; color: #000; }
+  .tb { background: var(--title); color: #fff; font: 700 30px Tahoma, sans-serif; padding: 8px 14px; display: flex; justify-content: space-between; }
+  .tb i { display: inline-block; width: 30px; height: 26px; background: var(--face); box-shadow: var(--raised); margin-left: 4px; }
+  .bd { padding: 28px; font-size: 34px; line-height: 1.3; }
+  .tag { font: 700 40px Tahoma, sans-serif; margin-top: auto; }
+  .url { font: 700 30px "Courier New", monospace; opacity: .85; }
+  .ch { display: flex; gap: 20px; align-items: center; background: var(--face); box-shadow: var(--raised); padding: 16px 20px; font: 700 34px Tahoma; margin-top: 14px; color: #000; }
+  .ch b { width: 60px; height: 60px; display: grid; place-items: center; border: 4px solid #000; font: 900 34px "Arial Black"; flex: none; }
+  .scene { background: #fff; box-shadow: var(--sunken); padding: 20px 24px; font: 30px/1.35 "Courier New", monospace; color: #000; }
+  .icons { display: grid; grid-template-columns: repeat(3, auto); gap: 50px 80px; justify-content: center; }
+  .icons svg { background: var(--face); box-shadow: var(--raised); padding: 18px; }
+  .heart svg { vertical-align: middle; }
+</style>
+</head>
+<body>
+
+<!-- 1. Brand / launch -->
+<section class="post" id="launch"><div class="pad">
+  <p class="url" style="margin:0 0 30px">NEW</p>
+  <h1 class="mega">GAME<br>ROOM</h1>
+  <div class="icons" style="margin-top:50px;justify-content:start;grid-template-columns:repeat(6,auto);gap:36px" data-icons="dice dna chart terminal book flask" data-size="80"></div>
+  <p class="tag">Hard questions. Real games. One room.</p>
+  <p class="url">Free to play &middot; no account</p>
+</div></section>
+
+<!-- 2. Boss question -->
+<section class="post" id="boss"><div class="pad">
+  <div class="win"><div class="tb"><span>AP Statistics: BOSS (double points)</span><span><i></i><i></i><i></i></span></div><div class="bd">
+    <div class="scene">H0: p = 0.5 vs Ha: p &gt; 0.5, &alpha; = 0.05, n = 100.<br>The truth is p = 0.6.</div>
+    <p style="font-weight:700;margin:24px 0 6px">About what is the power of the test?</p>
+    <div class="ch"><b style="background:var(--r);color:#fff">A</b>&asymp; 0.36</div>
+    <div class="ch"><b style="background:var(--y)">B</b>&asymp; 0.64</div>
+    <div class="ch"><b style="background:var(--p);color:#fff">C</b>&asymp; 0.05</div>
+    <div class="ch"><b style="background:#222;color:#fff">D</b>&asymp; 0.84</div>
+  </div></div>
+  <p class="tag" style="margin-top:auto">Most people pick the trap. You?</p>
+</div></section>
+
+<!-- 3. Teacher -->
+<section class="post" id="teacher"><div class="pad">
+  <h1 class="mega" style="font-size:170px">FUN<br>DAY</h1>
+  <div class="win" style="margin-top:50px"><div class="tb"><span>Party mode</span><span><i></i><i></i><i></i></span></div><div class="bd">
+    One projector. Every phone.<br>Quiz rounds, co-op games, a jukebox, movie night, awards.<br><b>No app. No account. Four letters and you're in.</b>
+  </div></div>
+  <p class="tag">One teacher code. Every device. For life.</p>
+  <p class="url">Try the demo free</p>
+</div></section>
+
+<!-- 4. Quiz Shelf -->
+<section class="post" id="shelf"><div class="pad">
+  <h1 class="mega" style="font-size:190px">QUIZ<br>SHELF</h1>
+  <div class="icons" style="margin-top:60px" data-icons="dna flask chart terminal book scroll" data-size="120"></div>
+  <p class="tag">Five packs. 146 questions. Every one tells you why.</p>
+  <p class="url">AP Bio &middot; AP Stats &middot; Bioinformatics &middot; Comparative Religion</p>
+</div></section>
+
+<!-- 5. Story 1080x1920 -->
+<section class="post story" id="story"><div class="pad" style="inset:140px 80px">
+  <h1 class="mega" style="font-size:260px">GAME<br>ROOM</h1>
+  <div class="win" style="margin-top:90px"><div class="tb"><span>Moth Hunter</span><span><i></i><i></i><i></i></span></div><div class="bd" style="font-size:44px">
+    You are the bird.<br>Eat the moths you can see.<br><b>Watch what happens to the ones you can't.</b></div></div>
+  <div class="icons" style="margin-top:90px" data-icons="dice dna leaf" data-size="130"></div>
+  <p class="tag" style="font-size:52px">Play free. Link in bio.</p>
+  <p class="url heart" data-heart>Made by Mitali Aayat Mahnoor</p>
+</div></section>
+
+<script type="module">
+  import { iconSvg } from '../engine/icons.js';
+  document.querySelectorAll('[data-icons]').forEach(el => {
+    el.innerHTML = el.dataset.icons.split(' ').map(n => iconSvg(n, { size: +el.dataset.size })).join('');
+  });
+  document.querySelectorAll('[data-heart]').forEach(el => el.insertAdjacentHTML('afterbegin', iconSvg('heart', { size: 36 }) + ' '));
+</script>
+</body>
+</html>

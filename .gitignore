@@ -1,0 +1,9 @@
+# Private: developer guide (owner code, customer log, admin SQL, AI notes)
+DEVELOPER.md
+
+# Local junk
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

@@ -1,0 +1,4 @@
+{
+  "_help": "Built-in quiz packs on the Quiz Shelf, in shelf order. Each id is a file quizzes/<id>.json (format in quizzes/FORMAT.md).",
+  "packs": ["ap-bio-deep", "ap-bio-fun-day", "ap-stats", "bioinformatics", "comparative-religion"]
+}

@@ -1,0 +1,11 @@
+{
+  "_help": "Every pack. folder = the folder under packs/.",
+  "packs": [
+    {
+      "id": "ap-bio",
+      "folder": "ap-bio",
+      "name": "Library",
+      "blurb": "Everything you can drop in"
+    }
+  ]
+}

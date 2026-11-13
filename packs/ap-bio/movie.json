@@ -1,0 +1,6 @@
+{
+  "_help": "Default movie. Paste a YouTube link here, or change it live from the host panel. quick = the one-tap chat buttons on phones.",
+  "url": "",
+  "title": "Movie night",
+  "quick": ["No way", "Called it", "This is so bad", "Rewind that", "Louder", "Who picked this"]
+}

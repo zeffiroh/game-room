@@ -1,0 +1,29 @@
+{
+  "title": "My quiz",
+  "subject": "Any subject",
+  "icon": "scroll",
+  "blurb": "One sentence about it.",
+  "rounds": [
+    {
+      "title": "Round 1",
+      "intro": "Read carefully. Faster right answers score more.",
+      "questions": [
+        {
+          "scene": "Optional: a setup, data or a short passage shown above the question.",
+          "q": "Which of these is the right answer?",
+          "choices": ["Wrong", "Right", "Wrong", "Wrong"],
+          "answer": 1,
+          "why": "Shown after the reveal. Say why it is right and why the tempting one is wrong.",
+          "seconds": 30
+        },
+        {
+          "q": "The last question of a round can be a boss: double points.",
+          "choices": ["True", "False"],
+          "answer": 0,
+          "why": "Add \"boss\": true to any question.",
+          "boss": true
+        }
+      ]
+    }
+  ]
+}
